@@ -37,6 +37,7 @@ dependencies:
   scroll_to_index: ^3.0.1 # 원하는 위치로 스크롤
   gap: ^3.0.1 # UI 요소 간 간격
   flutter_screenutil: ^5.9.3 # 반응형 디자인
+  flutter_dotenv: ^5.0.2 # 환경설정
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -62,6 +63,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/config/.env
   fonts:
     - family: SpoqaHanSansNeo
       fonts:

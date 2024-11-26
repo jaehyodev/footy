@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class MatchesService {
-  static const _apiToken = 'b895ff834aeb4f8880c26be76e13754c';
-  static const _baseUrl = 'https://api.football-data.org/v4';
+  static final String _apiKey = dotenv.env['FOOTBALL_API_KEY'] ?? 'No API Key';
+  static const String _baseUrl = 'https://api.football-data.org/v4';
 
   static Future<List<Map<String, dynamic>>> fetchMatches(
       String leagueCode, DateTime dateTime) async {
@@ -31,7 +32,7 @@ class MatchesService {
 
     final response = await http.get(
       Uri.parse(url),
-      headers: {'X-Auth-Token': _apiToken},
+      headers: {'X-Auth-Token': _apiKey},
     );
 
     if (response.statusCode == 200) {
