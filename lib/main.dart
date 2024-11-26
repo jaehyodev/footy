@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import './providers/league_provider.dart';
 import './providers/date_provider.dart';
 import 'theme/style.dart' as style;
@@ -8,7 +9,9 @@ import './screens/league/league_screen.dart'; // 예시로 홈 화면
 import './widgets/custom_app_bar.dart'; // 커스텀 앱바
 import './widgets/bottom_nav_bar.dart'; // 커스텀 바텀 네비게이션 바
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: 'assets/config/.env');
+
   runApp(
     MultiProvider(
       providers: [
