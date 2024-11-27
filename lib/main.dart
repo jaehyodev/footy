@@ -8,9 +8,13 @@ import './screens/home/home_screen.dart';
 import './screens/league/league_screen.dart'; // 예시로 홈 화면
 import './widgets/custom_app_bar.dart'; // 커스텀 앱바
 import './widgets/bottom_nav_bar.dart'; // 커스텀 바텀 네비게이션 바
+import './services/players_service.dart';
 
 void main() async {
   await dotenv.load(fileName: 'assets/config/.env');
+
+  final playersService = PlayersService();
+  playersService.fetchPlayer(); // fetchPlayer 호출
 
   runApp(
     MultiProvider(
