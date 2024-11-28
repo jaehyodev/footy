@@ -7,22 +7,24 @@ const port = 3000;
 app.use(cors());
 
 // db.json 데이터 불러오기
-const data = require("./db.json");
+const leagues = require("./data/leagues.json");
+const players = require("./data/players.json");
+const teams = require("./data/teams.json");
 
 // 엔드포인트 설정
 app.get("/leagues", (req, res) => {
-  res.json(data.leagues);
+  res.json(leagues);
 });
 
 app.get("/teams", (req, res) => {
-  res.json(data.teams);
+  res.json(teams);
 });
 
 app.get("/players", (req, res) => {
-  res.json(data.players);
+  res.json(players);
 });
 
 // 서버 시작
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
