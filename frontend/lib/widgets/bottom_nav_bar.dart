@@ -14,6 +14,14 @@ class BottomNavBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: true,
       showUnselectedLabels: true,
+      selectedLabelStyle: const TextStyle(
+        fontFamily: 'SCDream',
+        fontWeight: FontWeight.w500, // 선택된 라벨의 폰트 설정
+      ),
+      unselectedLabelStyle: const TextStyle(
+        fontFamily: 'SCDream',
+        fontWeight: FontWeight.w500, // 선택되지 않은 라벨의 폰트 설정
+      ),
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined), label: "경기"),

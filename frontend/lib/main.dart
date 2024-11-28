@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import './data/constants.dart';
-import './widgets/custom_app_bar.dart'; // 커스텀 앱바
+import './widgets/custom_app_bar.dart';
 import './widgets/bottom_nav_bar.dart';
+import './themes/style.dart';
 
 void main() async {
   runApp(
-    const MaterialApp(
-      home: MyApp(),
+    MaterialApp(
+      theme: theme,
+      home: const MyApp(),
     ),
   );
 }
