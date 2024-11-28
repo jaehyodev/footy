@@ -29,7 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
-    sdk: flutterf
+    sdk: flutter
 
   flutter_screenutil: ^5.9.3 # 반응형 디자인
   gap: ^3.0.1 # UI 요소 간 간격
