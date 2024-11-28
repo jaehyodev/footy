@@ -1,0 +1,193 @@
+{
+  "teams": [
+    {
+      "id": "LIV",
+      "name": "리버풀",
+      "manager": "아르네 슬롯",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "MCI",
+      "name": "맨시티",
+      "manager": "펩 과르디올라",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "CHE",
+      "name": "첼시",
+      "manager": "엔초 마레스카",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "ARS",
+      "name": "아스널",
+      "manager": "미켈 아르테타",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "BHA",
+      "name": "브라이튼",
+      "manager": "파비안 휘르첼러",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "TOT",
+      "name": "토트넘",
+      "manager": "엔지 포스테코글루",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "NOT",
+      "name": "노팅엄",
+      "manager": "누누 에스피리투 산투",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "AVL",
+      "name": "애스턴 빌라",
+      "manager": "우나이 에메리",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "FUL",
+      "name": "풀럼",
+      "manager": "마르코 실바",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "NEW",
+      "name": "뉴캐슬",
+      "manager": "에디 하우",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "BRE",
+      "name": "브렌트퍼드",
+      "manager": "토마스 프랭크",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "MNU",
+      "name": "맨유",
+      "manager": "루벤 아모림",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "BOU",
+      "name": "본머스",
+      "manager": "안도니 이라올라",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "WHU",
+      "name": "웨스트햄",
+      "manager": "훌렌 로페테기",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "EVE",
+      "name": "에버턴",
+      "manager": "션 다이치",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "LEI",
+      "name": "레스터 시티",
+      "manager": "",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "WOL",
+      "name": "울버햄턴",
+      "manager": "게리 오닐",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "IPW",
+      "name": "입스위치",
+      "manager": "키어런 맥케나",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "CRY",
+      "name": "팰리스",
+      "manager": "올리버 글라스너",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "SOU",
+      "name": "사우샘프턴",
+      "manager": "러셀 마틴",
+      "league": {
+        "id": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": "BAY",
+      "name": "바이에른 뮌헨",
+      "manager": "빈센트 콤파니",
+      "league": {
+        "id": "BL1",
+        "name": "분데스리가"
+      }
+    }
+  ]
+}

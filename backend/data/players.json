@@ -1,0 +1,724 @@
+{
+  "players": [
+    {
+      "id": "TOT1",
+      "name": "굴리엘모 비카리오",
+      "uniformNumber": "1",
+      "position": "GK",
+      "country": "IT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT3",
+      "name": "세르히오 레길론",
+      "uniformNumber": "3",
+      "position": "DF",
+      "country": "ES",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT6",
+      "name": "라두 드라구신",
+      "uniformNumber": "6",
+      "position": "DF",
+      "country": "RO",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT7",
+      "name": "손흥민",
+      "uniformNumber": "7",
+      "position": "FW",
+      "country": "KR",
+      "captain": true,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT8",
+      "name": "이브 비수마",
+      "uniformNumber": "8",
+      "position": "MF",
+      "country": "ML",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT9",
+      "name": "히샬리송",
+      "uniformNumber": "9",
+      "position": "FW",
+      "country": "BR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT10",
+      "name": "제임스 매디슨",
+      "uniformNumber": "10",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "TOT13",
+      "name": "데스티니 우도기",
+      "uniformNumber": "13",
+      "position": "DF",
+      "country": "IT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT14",
+      "name": "아치 그레이",
+      "uniformNumber": "14",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT15",
+      "name": "루카스 베리발",
+      "uniformNumber": "15",
+      "position": "MF",
+      "country": "SE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT16",
+      "name": "티모 베르너",
+      "uniformNumber": "16",
+      "position": "FW",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT17",
+      "name": "크리스티안 로메로",
+      "uniformNumber": "17",
+      "position": "DF",
+      "country": "AR",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "TOT19",
+      "name": "도미닉 솔랑케",
+      "uniformNumber": "19",
+      "position": "FW",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT20",
+      "name": "프레이저 포스터",
+      "uniformNumber": "20",
+      "position": "GK",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT21",
+      "name": "데얀 쿨루셉스키",
+      "uniformNumber": "21",
+      "position": "MF",
+      "country": "SE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT22",
+      "name": "브레넌 존슨",
+      "uniformNumber": "22",
+      "position": "FW",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT23",
+      "name": "페드로 포로",
+      "uniformNumber": "23",
+      "position": "DF",
+      "country": "ES",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT24",
+      "name": "제드 스펜스",
+      "uniformNumber": "24",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT28",
+      "name": "윌손 오도베르",
+      "uniformNumber": "28",
+      "position": "FW",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT29",
+      "name": "파페 마타르 사르",
+      "uniformNumber": "29",
+      "position": "MF",
+      "country": "SN",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT30",
+      "name": "로드리고 벤탄쿠르",
+      "uniformNumber": "30",
+      "position": "MF",
+      "country": "UY",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT33",
+      "name": "벤 데이비스",
+      "uniformNumber": "33",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT37",
+      "name": "미키 판더펜",
+      "uniformNumber": "37",
+      "position": "DF",
+      "country": "NL",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT40",
+      "name": "브랜던 오스틴",
+      "uniformNumber": "40",
+      "position": "GK",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "TOT41",
+      "name": "알피 화이트먼",
+      "uniformNumber": "41",
+      "position": "GK",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU1",
+      "name": "알타이 바이은드르",
+      "uniformNumber": "1",
+      "position": "GK",
+      "country": "TR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU2",
+      "name": "빅토르 린델뢰프",
+      "uniformNumber": "2",
+      "position": "DF",
+      "country": "SE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU3",
+      "name": "누사이르 마즈라위",
+      "uniformNumber": "3",
+      "position": "DF",
+      "country": "MA",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU4",
+      "name": "마테이스 더리흐트",
+      "uniformNumber": "4",
+      "position": "DF",
+      "country": "NL",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU5",
+      "name": "해리 매과이어",
+      "uniformNumber": "5",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU6",
+      "name": "리산드로 마르티네스",
+      "uniformNumber": "6",
+      "position": "DF",
+      "country": "AR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU7",
+      "name": "메이슨 마운트",
+      "uniformNumber": "7",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU8",
+      "name": "브루노 페르난데스",
+      "uniformNumber": "8",
+      "position": "MF",
+      "country": "PT",
+      "captain": true,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU9",
+      "name": "라스무스 호일룬",
+      "uniformNumber": "9",
+      "position": "FW",
+      "country": "DK",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU10",
+      "name": "마커스 래시포드",
+      "uniformNumber": "10",
+      "position": "FW",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "MU11",
+      "name": "조슈아 지르크지",
+      "uniformNumber": "11",
+      "position": "FW",
+      "country": "NL",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU12",
+      "name": "타이럴 말라시아",
+      "uniformNumber": "12",
+      "position": "DF",
+      "country": "NL",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU14",
+      "name": "크리스티안 에릭센",
+      "uniformNumber": "14",
+      "position": "MF",
+      "country": "DK",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU15",
+      "name": "레니 요로",
+      "uniformNumber": "15",
+      "position": "DF",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU16",
+      "name": "아마드 디알로",
+      "uniformNumber": "16",
+      "position": "MF",
+      "country": "CI",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU17",
+      "name": "알레한드로 가르나초",
+      "uniformNumber": "17",
+      "position": "FW",
+      "country": "AR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU18",
+      "name": "카세미루",
+      "uniformNumber": "18",
+      "position": "MF",
+      "country": "BR",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "MU20",
+      "name": "디오구 달로트",
+      "uniformNumber": "20",
+      "position": "DF",
+      "country": "PT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU21",
+      "name": "안토니",
+      "uniformNumber": "21",
+      "position": "FW",
+      "country": "BR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU22",
+      "name": "톰 히튼",
+      "uniformNumber": "22",
+      "position": "GK",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU23",
+      "name": "루크 쇼",
+      "uniformNumber": "23",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU24",
+      "name": "안드레 오나나",
+      "uniformNumber": "24",
+      "position": "GK",
+      "country": "CM",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU25",
+      "name": "마누엘 우가르테",
+      "uniformNumber": "25",
+      "position": "MF",
+      "country": "UY",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU35",
+      "name": "조니 에반스",
+      "uniformNumber": "35",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU36",
+      "name": "에단 휘틀리",
+      "uniformNumber": "36",
+      "position": "FW",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU37",
+      "name": "코비 마이누",
+      "uniformNumber": "37",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU41",
+      "name": "해리 애머스",
+      "uniformNumber": "41",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU43",
+      "name": "토비 콜리어",
+      "uniformNumber": "43",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "MU44",
+      "name": "대니얼 고어",
+      "uniformNumber": "44",
+      "position": "MF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY1",
+      "name": "마누엘 노이어",
+      "uniformNumber": "1",
+      "position": "GK",
+      "country": "DE",
+      "captain": true,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY2",
+      "name": "다요 우파메카노",
+      "uniformNumber": "2",
+      "position": "DF",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY3",
+      "name": "김민재",
+      "uniformNumber": "3",
+      "position": "DF",
+      "country": "KR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY6",
+      "name": "요주아 키미히",
+      "uniformNumber": "6",
+      "position": "MF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY7",
+      "name": "세르주 그나브리",
+      "uniformNumber": "7",
+      "position": "FW",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY8",
+      "name": "레온 고레츠카",
+      "uniformNumber": "8",
+      "position": "MF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY9",
+      "name": "해리 케인",
+      "uniformNumber": "9",
+      "position": "FW",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY10",
+      "name": "리로이 사네",
+      "uniformNumber": "10",
+      "position": "FW",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY11",
+      "name": "킹슬리 코망",
+      "uniformNumber": "11",
+      "position": "FW",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY15",
+      "name": "에릭 다이어",
+      "uniformNumber": "15",
+      "position": "DF",
+      "country": "GB",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "BAY16",
+      "name": "주앙 팔리냐",
+      "uniformNumber": "16",
+      "position": "MF",
+      "country": "PT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY17",
+      "name": "마이클 올리세",
+      "uniformNumber": "17",
+      "position": "FW",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY18",
+      "name": "다니엘 페레츠",
+      "uniformNumber": "18",
+      "position": "GK",
+      "country": "IL",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY19",
+      "name": "알폰소 데이비스",
+      "uniformNumber": "19",
+      "position": "DF",
+      "country": "CA",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY20",
+      "name": "아리욘 이브라히모비치",
+      "uniformNumber": "20",
+      "position": "MF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY21",
+      "name": "이토 히로키",
+      "uniformNumber": "21",
+      "position": "DF",
+      "country": "JP",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY22",
+      "name": "라파엘 게헤이루",
+      "uniformNumber": "22",
+      "position": "DF",
+      "country": "PT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY23",
+      "name": "사샤 보이",
+      "uniformNumber": "23",
+      "position": "DF",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY25",
+      "name": "토마스 뮐러",
+      "uniformNumber": "25",
+      "position": "FW",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": true
+    },
+    {
+      "id": "BAY26",
+      "name": "스벤 울라이히",
+      "uniformNumber": "26",
+      "position": "GK",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY27",
+      "name": "콘라트 라이머",
+      "uniformNumber": "27",
+      "position": "MF",
+      "country": "AT",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY28",
+      "name": "타레크 부흐만",
+      "uniformNumber": "28",
+      "position": "DF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY39",
+      "name": "마티스 텔",
+      "uniformNumber": "39",
+      "position": "FW",
+      "country": "FR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY42",
+      "name": "자말 무시알라",
+      "uniformNumber": "42",
+      "position": "MF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY44",
+      "name": "요시프 스타니시치",
+      "uniformNumber": "44",
+      "position": "DF",
+      "country": "HR",
+      "captain": false,
+      "viceCaptain": false
+    },
+    {
+      "id": "BAY45",
+      "name": "알렉산다르 파블로비치",
+      "uniformNumber": "45",
+      "position": "MF",
+      "country": "DE",
+      "captain": false,
+      "viceCaptain": false
+    }
+  ]
+}
