@@ -63,7 +63,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_dotenv:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_dotenv
       sha256: b7c7be5cd9f6ef7a78429cabd2774d3c4af50e79cb2b7593e3d5d763ef95c61b
@@ -79,7 +79,7 @@ packages:
     source: hosted
     version: "4.0.0"
   flutter_screenutil:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_screenutil
       sha256: "8239210dd68bee6b0577aa4a090890342d04a136ce1c81f98ee513fc0ce891de"
@@ -92,7 +92,7 @@ packages:
     source: sdk
     version: "0.0.0"
   gap:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: gap
       sha256: f19387d4e32f849394758b91377f9153a1b41d79513ef7668c088c77dbc6955d
@@ -100,7 +100,7 @@ packages:
     source: hosted
     version: "3.0.1"
   http:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: http
       sha256: b9c29a161230ee03d3ccf545097fccd9b87a5264228c5d348202e0f0c28f9010
@@ -116,7 +116,7 @@ packages:
     source: hosted
     version: "4.0.2"
   intl:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: intl
       sha256: "99f282cb0e02edcbbf8c6b3bbc7c90b65635156c412e58f3975a7e55284ce685"
@@ -196,7 +196,7 @@ packages:
     source: hosted
     version: "1.9.0"
   provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: provider
       sha256: c8a055ee5ce3fd98d6fc872478b03823ffdb448699c6ebdbbc71d59b596fd48c
@@ -204,7 +204,7 @@ packages:
     source: hosted
     version: "6.1.2"
   scroll_to_index:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: scroll_to_index
       sha256: b707546e7500d9f070d63e5acf74fd437ec7eeeb68d3412ef7b0afada0b4f176
