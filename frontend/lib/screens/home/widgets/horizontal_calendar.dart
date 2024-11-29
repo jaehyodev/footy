@@ -78,7 +78,7 @@ class HorizontalCalendarState extends State<HorizontalCalendar> {
     context
         .read<DateProvider>()
         .updateDateTime(selectedDate); // Provider를 통해 상태 업데이트
-    print(selectedDate);
+    print("horizontal_calendar.dart | 현재 선택된 날짜: $selectedDate");
   }
 
   @override
