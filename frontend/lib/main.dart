@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './data/constants.dart';
 import './providers/league_provider.dart';
+import './providers/date_provider.dart';
 import './screens/home/home_screen.dart';
 import './widgets/custom_app_bar.dart';
 import './widgets/bottom_nav_bar.dart';
@@ -12,6 +13,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => LeagueProvider()),
+        ChangeNotifierProvider(create: (_) => DateProvider()),
       ],
       child: MaterialApp(
         home: const MyApp(),
@@ -29,12 +31,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(), // 공통 앱바
+      appBar: CustomAppBar(),
       body: Padding(
-        padding: bodyPadding, // bodyPadding을 적용
-        child: HomeScreen(), // 현재 화면이 HomeScreen으로 설정
+        padding: bodyPadding,
+        child: HomeScreen(),
       ),
-      bottomNavigationBar: BottomNavBar(), // 공통 바텀 네비게이션 바
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
