@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './widgets/leagues_list.dart';
+import './widgets/horizontal_calendar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,6 +15,7 @@ class HomeScreenState extends State<HomeScreen> {
     return const Column(
       children: <Widget>[
         LeaguesList(),
+        HorizontalCalendar(),
       ],
     );
   }
