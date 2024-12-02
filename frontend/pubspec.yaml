@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
 
   flutter_screenutil: ^5.9.3 # 반응형 디자인
+  fluttertoast: ^8.2.8 # 토스트 메시지
   gap: ^3.0.1 # UI 요소 간 간격
   intl: ^0.20.0 # 날짜 및 시간 변환
   provider: ^6.0.5 # 상태 관리
