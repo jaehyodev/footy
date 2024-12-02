@@ -27,7 +27,7 @@ void main() async {
       ],
       child: MaterialApp(
         home: const MyApp(),
-        theme: theme,
+        theme: AppStyle.theme,
       ),
     ),
   );
@@ -97,7 +97,7 @@ class _MyAppState extends State<MyApp> {
       child: Scaffold(
         appBar: const CustomAppBar(),
         body: Padding(
-          padding: bodyPadding,
+          padding: AppStyle.bodyPadding,
           child: _screens[_selectedIndex],
         ),
         bottomNavigationBar: BottomNavBar(
