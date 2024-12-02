@@ -2,20 +2,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../providers/date_provider.dart';
-import '../../../themes/style.dart';
+
+import 'package:frontend/providers/date_provider.dart';
+import 'package:frontend/themes/style.dart';
 
 TextStyle getTextStyle(BuildContext context, DateTime date,
     {bool isBold = false}) {
   final selectedDate = context.watch<DateProvider>().selectedDateTime;
 
-  // 연월일만 비교
+  // 선택된 날짜 스타일
   TextStyle baseStyle = TextStyle(
     color: (date.year == selectedDate.year &&
             date.month == selectedDate.month &&
             date.day == selectedDate.day)
-        ? primary
-        : textPrimary, // 기본 색상
+        ? AppStyle.primary
+        : AppStyle.textPrimary,
     fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
   );
 
@@ -30,7 +31,7 @@ BoxDecoration getButtonDecoration(BuildContext context, DateTime date) {
       date.month == selectedDate.month &&
       date.day == selectedDate.day) {
     return const BoxDecoration(
-      border: Border(bottom: BorderSide(color: primary, width: 2)),
+      border: Border(bottom: BorderSide(color: AppStyle.primary, width: 2)),
     );
   } else {
     return const BoxDecoration(); // 선택되지 않은 날짜는 선 없음
