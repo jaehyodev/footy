@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import './data/constants.dart';
 import './providers/league_provider.dart';
@@ -9,6 +10,8 @@ import './widgets/bottom_nav_bar.dart';
 import './themes/style.dart';
 
 void main() async {
+  await dotenv.load(fileName: 'assets/config/.env');
+
   runApp(
     MultiProvider(
       providers: [
