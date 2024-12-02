@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../themes/leagues_list_styles.dart';
-import '../../../models/leagues.dart';
+import '../../../models/league.dart';
 import '../../../providers/league_provider.dart';
 
 class LeaguesList extends StatefulWidget {

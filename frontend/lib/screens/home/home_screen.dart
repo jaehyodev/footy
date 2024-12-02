@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './widgets/leagues_list.dart';
 import './widgets/horizontal_calendar.dart';
+import 'package:frontend/screens/home/widgets/matches_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,6 +17,7 @@ class HomeScreenState extends State<HomeScreen> {
       children: <Widget>[
         LeaguesList(),
         HorizontalCalendar(),
+        MatchesList(),
       ],
     );
   }
