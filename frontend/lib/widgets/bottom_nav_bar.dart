@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
-  // final Function(int) onTap; // 탭 클릭 시 호출될 콜백 함수
-  // final int selectedIndex; // 현재 선택된 인덱스
+  final int selectedIndex; // 선택된 인덱스를 받음
+  final Function(int) onTap;
 
   const BottomNavBar({
     super.key,
+    required this.selectedIndex,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      // 선택된 탭과 선택되지 않은 탭의 너비를 동일하게 설정
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      selectedLabelStyle: const TextStyle(
-        fontFamily: 'SCDream',
-        fontWeight: FontWeight.w500, // 선택된 라벨의 폰트 설정
-      ),
-      unselectedLabelStyle: const TextStyle(
-        fontFamily: 'SCDream',
-        fontWeight: FontWeight.w500, // 선택되지 않은 라벨의 폰트 설정
-      ),
+      onTap: onTap,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined), label: "경기"),
