@@ -23,23 +23,15 @@ class LeaguesService {
     if (response.statusCode == 200) {
       // 응답 데이터를 JSON으로 파싱
       final Map<String, dynamic> data = jsonDecode(response.body);
-      // print('leagues_service.dart | API 호출로부터 받은 리그 순위: $data');
 
-      // 'matches' 배열을 리스트로 변환
-      List<Map<String, dynamic>> leaguesList =
-          List<Map<String, dynamic>>.from(data['season']);
-      return leaguesList;
+      // 순위 데이터만 추출
+      List<Map<String, dynamic>> standings =
+          List<Map<String, dynamic>>.from(data['standings'][0]['table']);
+      print(
+          'leagies_service.dart | $season 시즌의 $leagueCode 리그 순위 정보: $standings');
+      return standings;
     } else {
       throw Exception("Failed to load matches");
     }
   }
 }
-
-// '전체' 항목을 제외하고 리그 목록을 반환
-// List<League> getLeagues(List<League> leagues, bool includeAll) {
-//   if (includeAll) {
-//     return leagues; // 전체 포함
-//   } else {
-//     return leagues.where((league) => league.name != '전체').toList(); // 전체 제외
-//   }
-// }
