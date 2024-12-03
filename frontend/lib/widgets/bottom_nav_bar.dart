@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
-  final int selectedIndex; // 선택된 인덱스를 받음
+  final int selectedIndex;
   final Function(int) onTap;
 
   const BottomNavBar({
@@ -17,6 +17,7 @@ class BottomNavBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: true,
       showUnselectedLabels: true,
+      currentIndex: selectedIndex,
       onTap: onTap,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
