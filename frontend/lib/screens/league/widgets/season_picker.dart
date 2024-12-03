@@ -41,10 +41,9 @@ class _SeasonPickerState extends State<SeasonPicker> {
       setState(() => isLoading = true); // mounted 확인 후 호출
     }
     try {
-      print('season_picker.dart | season: $selectedSeason');
       final data = await LeaguesService.fetchLeague(leagueCode, selectedSeason);
       print(
-          'season_picker.dart | $selectedSeason 시즌의 $leagueCode 리그 정보: $data');
+          'season_picker.dart | $selectedSeason 시즌의 $leagueCode 리그 순위 정보: $data');
     } catch (e) {
       print(
           'season_picker.dart | $selectedSeason 시즌의 $leagueCode 리그 정보 불러오기 에러: $e');
