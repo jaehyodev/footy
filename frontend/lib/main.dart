@@ -22,8 +22,8 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => LeagueProvider()),
         ChangeNotifierProvider(create: (_) => DateProvider()),
+        ChangeNotifierProvider(create: (_) => LeagueProvider()),
       ],
       child: MaterialApp(
         home: const MyApp(),
@@ -41,6 +41,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   final String appName = Constants.appName;
 
   // 선택된 화면의 인덱스
