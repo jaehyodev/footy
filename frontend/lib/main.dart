@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/screens/following/following_screen.dart';
 import 'package:frontend/screens/home/home_screen.dart';
 import 'package:frontend/screens/league/league_screen.dart';
@@ -24,6 +25,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => DateProvider()),
         ChangeNotifierProvider(create: (_) => LeagueProvider()),
+        ChangeNotifierProvider(create: (_) => SeasonProvider()),
       ],
       child: MaterialApp(
         home: const MyApp(),
