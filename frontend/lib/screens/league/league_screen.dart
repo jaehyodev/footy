@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/widgets/leagues_list.dart';
 
 class LeagueScreen extends StatefulWidget {
   const LeagueScreen({super.key});
@@ -10,6 +11,10 @@ class LeagueScreen extends StatefulWidget {
 class LeagueScreenState extends State<LeagueScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('League Screen'));
+    return const Column(
+      children: <Widget>[
+        LeaguesList(includesAll: false),
+      ],
+    );
   }
 }
