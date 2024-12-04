@@ -43,7 +43,7 @@ class LeagueProvider extends ChangeNotifier {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _selectedIndex = 0;
       _selectedLeagueName = '프리미어리그';
-      _selectedLeagueCode = 'PR';
+      _selectedLeagueCode = 'PL';
       notifyListeners();
     });
   }
