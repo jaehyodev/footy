@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:frontend/screens/league/widgets/season_picker.dart';
+import 'package:frontend/screens/league/widgets/standings_label.dart';
+import 'package:frontend/screens/league/widgets/standings_list.dart';
 import 'package:frontend/widgets/leagues_list.dart';
 
 class LeagueScreen extends StatefulWidget {
@@ -17,6 +19,8 @@ class LeagueScreenState extends State<LeagueScreen> {
       children: <Widget>[
         LeaguesList(includesAll: false),
         SeasonPicker(),
+        StandingsLabel(),
+        StandingsList(),
       ],
     );
   }
