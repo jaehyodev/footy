@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
@@ -52,11 +52,21 @@ class _MyAppState extends State<MyApp> {
 
   // 선택된 화면의 인덱스
   int _selectedIndex = 0;
+  // 앱바 제목
+  String _appBarTitle = Constants.appBarTitles[0];
+  // 현재 홈 화면인지 여부
+  bool _isHomePage = true;
 
   // 화면을 전환하는 함수
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      _appBarTitle = Constants.appBarTitles[index];
+      if (index != 0) {
+        _isHomePage = false;
+      } else {
+        _isHomePage = true;
+      }
     });
   }
 
@@ -102,7 +112,10 @@ class _MyAppState extends State<MyApp> {
         _goBack();
       },
       child: Scaffold(
-        appBar: const CustomAppBar(),
+        appBar: CustomAppBar(
+          title: _appBarTitle,
+          isHomePage: _isHomePage,
+        ),
         body: Padding(
           padding: AppStyle.bodyPadding,
           child: _screens[_selectedIndex],
