@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/data/constants.dart';
+import 'package:gap/gap.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  // 앱바 타이틀
+  final String title;
+  // 홈 화면인지 여부를 판단하는 변수
+  final bool isHomePage;
+
+  const CustomAppBar({
+    super.key,
+    required this.title,
+    required this.isHomePage,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +22,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           // 아이콘과 타이틀을 클릭할 때 동일한 동작
           _onAppBarPressed(context);
         },
-        child: const Row(
+        child: Row(
           children: [
-            Icon(Icons.sports_soccer), // 축구공 아이콘
-            SizedBox(width: 8), // 아이콘과 타이틀 사이에 간격 추가
+            // 홈 화면일 때만 축구공 아이콘을 표시
+            if (isHomePage) const Icon(Icons.sports_soccer),
+            if (isHomePage) const Gap(8),
             Text(
-              Constants.appName,
-              style: TextStyle(fontWeight: FontWeight.w900),
+              title,
+              style: const TextStyle(fontWeight: FontWeight.w900),
             ),
           ],
         ),
       ),
       bottom: const PreferredSize(
-        preferredSize: Size.fromHeight(0), // 앱바의 하단 여백을 0으로 설정
+        // 앱바의 하단 여백을 0으로 설정
+        preferredSize: Size.fromHeight(0),
         child: SizedBox(),
       ),
     );
