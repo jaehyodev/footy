@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
+import 'package:frontend/providers/following_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/screens/following/following_screen.dart';
@@ -14,6 +15,7 @@ import 'package:frontend/screens/league/league_screen.dart';
 import 'package:frontend/screens/news/news_screen.dart';
 import 'package:frontend/screens/settings/settings_screen.dart';
 import 'package:frontend/themes/style.dart';
+import 'package:frontend/utils/modal_utils.dart';
 import 'package:frontend/widgets/custom_app_bar.dart';
 import 'package:frontend/widgets/bottom_nav_bar.dart';
 
@@ -24,6 +26,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => DateProvider()),
+        ChangeNotifierProvider(create: (_) => FollowingProvider()),
         ChangeNotifierProvider(create: (_) => LeagueProvider()),
         ChangeNotifierProvider(create: (_) => SeasonProvider()),
       ],
@@ -52,11 +55,21 @@ class _MyAppState extends State<MyApp> {
 
   // 선택된 화면의 인덱스
   int _selectedIndex = 0;
+  // 앱바 제목
+  String _appBarTitle = Constants.appBarTitles[0];
+  // 현재 홈 화면인지 여부
+  bool _isHomePage = true;
 
   // 화면을 전환하는 함수
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      _appBarTitle = Constants.appBarTitles[index];
+      if (index != 0) {
+        _isHomePage = false;
+      } else {
+        _isHomePage = true;
+      }
     });
   }
 
@@ -102,7 +115,28 @@ class _MyAppState extends State<MyApp> {
         _goBack();
       },
       child: Scaffold(
-        appBar: const CustomAppBar(),
+        appBar: CustomAppBar(
+          title: _appBarTitle,
+          isHomePage: _isHomePage,
+          actions: _selectedIndex == 3 // FollowingScreen일 때만 추가
+              ? [
+                  Consumer<FollowingProvider>(
+                    builder: (context, provider, _) {
+                      return IconButton(
+                        icon: Icon(
+                          provider.isEditing ? Icons.check : Icons.edit,
+                        ),
+                        onPressed: provider.toggleEditMode,
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.add),
+                    onPressed: () => showSearchModal(context),
+                  ),
+                ]
+              : null,
+        ),
         body: Padding(
           padding: AppStyle.bodyPadding,
           child: _screens[_selectedIndex],
