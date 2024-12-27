@@ -6,11 +6,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   // 홈 화면인지 여부를 판단하는 변수
   final bool isHomePage;
+  // 팔로잉 화면에서 앱바를 다르게 만들기 위함
+  final List<Widget>? actions;
 
   const CustomAppBar({
     super.key,
     required this.title,
     required this.isHomePage,
+    this.actions,
   });
 
   @override
@@ -34,6 +37,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
       ),
+      actions: actions,
       bottom: const PreferredSize(
         // 앱바의 하단 여백을 0으로 설정
         preferredSize: Size.fromHeight(0),

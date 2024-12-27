@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screens/following/widgets/following_list.dart';
 
 class FollowingScreen extends StatefulWidget {
   const FollowingScreen({super.key});
@@ -10,6 +11,10 @@ class FollowingScreen extends StatefulWidget {
 class FollowingScreenState extends State<FollowingScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Following Screen'));
+    return const Column(
+      children: <Widget>[
+        FollowingList(),
+      ],
+    );
   }
 }
