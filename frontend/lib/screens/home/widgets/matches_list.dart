@@ -51,11 +51,17 @@ class _MatchesListState extends State<MatchesList> {
     try {
       final fetchedMatches =
           await MatchesService.fetchMatches(leagueCode, dateTime);
-      setState(() => matches = fetchedMatches);
+      if (mounted) {
+        // 위젯이 트리에 있으면 setState 호출
+        setState(() => matches = fetchedMatches);
+      }
     } catch (e) {
       print("Error: $e");
     } finally {
-      setState(() => isLoading = false);
+      if (mounted) {
+        // 위젯이 트리에 있으면 setState 호출
+        setState(() => isLoading = false);
+      }
     }
   }
 
