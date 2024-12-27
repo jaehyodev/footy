@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:frontend/screens/settings/widgets/settings_notification.dart';
+
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
@@ -10,6 +12,10 @@ class SettingsScreen extends StatefulWidget {
 class SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Settings Screen'));
+    return const Column(
+      children: [
+        SettingsNotification(),
+      ],
+    );
   }
 }
