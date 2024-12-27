@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
+import 'package:frontend/providers/following_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/screens/following/following_screen.dart';
@@ -14,6 +15,7 @@ import 'package:frontend/screens/league/league_screen.dart';
 import 'package:frontend/screens/news/news_screen.dart';
 import 'package:frontend/screens/settings/settings_screen.dart';
 import 'package:frontend/themes/style.dart';
+import 'package:frontend/utils/modal_utils.dart';
 import 'package:frontend/widgets/custom_app_bar.dart';
 import 'package:frontend/widgets/bottom_nav_bar.dart';
 
@@ -24,6 +26,7 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => DateProvider()),
+        ChangeNotifierProvider(create: (_) => FollowingProvider()),
         ChangeNotifierProvider(create: (_) => LeagueProvider()),
         ChangeNotifierProvider(create: (_) => SeasonProvider()),
       ],
@@ -115,6 +118,24 @@ class _MyAppState extends State<MyApp> {
         appBar: CustomAppBar(
           title: _appBarTitle,
           isHomePage: _isHomePage,
+          actions: _selectedIndex == 3 // FollowingScreen일 때만 추가
+              ? [
+                  Consumer<FollowingProvider>(
+                    builder: (context, provider, _) {
+                      return IconButton(
+                        icon: Icon(
+                          provider.isEditing ? Icons.check : Icons.edit,
+                        ),
+                        onPressed: provider.toggleEditMode,
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.add),
+                    onPressed: () => showSearchModal(context),
+                  ),
+                ]
+              : null,
         ),
         body: Padding(
           padding: AppStyle.bodyPadding,

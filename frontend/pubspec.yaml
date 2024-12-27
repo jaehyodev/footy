@@ -40,6 +40,8 @@ dependencies:
 
   http: ^1.2.2 # API 호출
 
+  shared_preferences: ^2.3.4 # 로컬 저장
+
   flutter_dotenv: ^5.0.2 # 환경설정
 
   # The following adds the Cupertino Icons font to your application.
@@ -68,6 +70,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/config/.env
+    - assets/icons/teams/
   fonts:
     - family: Pretendard
       fonts:
