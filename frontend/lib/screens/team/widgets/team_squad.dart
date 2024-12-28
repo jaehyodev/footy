@@ -44,7 +44,8 @@ class _TeamSquadState extends State<TeamSquad> {
     squad['감독']!.add({
       'name': team['manager']['name'],
       'position': '감독',
-      'country': team['manager']['country'],
+      'countryName': team['manager']['countryName'],
+      'countryCode': team['manager']['countryCode'],
     });
 
     // 선수 정보를 포지션별로 분류
@@ -86,7 +87,7 @@ class _TeamSquadState extends State<TeamSquad> {
           child: ListView.builder(
             itemCount: squad.length,
             itemBuilder: (context, index) {
-              // position을 순차적으로 가져오기 (Manager, GK, DF, MF, FW)
+              // position을 순차적으로 가져오기
               final position = squad.keys.elementAt(index);
               final players = squad[position]!;
 
@@ -106,12 +107,15 @@ class _TeamSquadState extends State<TeamSquad> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              position,
-              style: const TextStyle(
+            child: Align(
+              alignment: Alignment.centerLeft, // 왼쪽 정렬
+              child: Text(
+                position,
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue),
+                ),
+              ),
             ),
           ),
           Column(
