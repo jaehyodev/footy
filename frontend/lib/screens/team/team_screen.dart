@@ -26,6 +26,7 @@ class _TeamScreenState extends State<TeamScreen> {
               ? Color(int.parse('0xFF${team.color.substring(1)}'))
               : Colors.transparent,
           elevation: 0,
+          scrolledUnderElevation: 0,
           iconTheme: const IconThemeData(
             color: Colors.white,
           ),
