@@ -37,6 +37,7 @@ dependencies:
   intl: ^0.20.0 # 날짜 및 시간 변환
   provider: ^6.0.5 # 상태 관리
   scroll_to_index: ^3.0.1 # 원하는 위치로 스크롤
+  country_flags: ^3.2.0 # 국기 표시
 
   http: ^1.2.2 # API 호출
   url_launcher: ^6.3.1 # URL 열기
