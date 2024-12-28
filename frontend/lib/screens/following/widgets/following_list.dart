@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screens/team/team_screen.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/following_provider.dart';
+import 'package:frontend/providers/team_provider.dart';
 
 class FollowingList extends StatefulWidget {
   const FollowingList({super.key});
@@ -65,6 +67,17 @@ class _FollowingListState extends State<FollowingList> {
                   Text(team.name), // 팀명
                 ],
               ),
+              onTap: () {
+                // 팀 선택 시 TeamProvider에 팀 저장하고 상세 페이지로 이동
+                Provider.of<TeamProvider>(context, listen: false)
+                    .selectTeam(team);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TeamScreen(),
+                  ),
+                );
+              },
             ),
           );
         },
