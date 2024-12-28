@@ -8,6 +8,7 @@ import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/providers/following_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/news_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/screens/following/following_screen.dart';
 import 'package:frontend/screens/home/home_screen.dart';
@@ -28,6 +29,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => DateProvider()),
         ChangeNotifierProvider(create: (_) => FollowingProvider()),
         ChangeNotifierProvider(create: (_) => LeagueProvider()),
+        ChangeNotifierProvider(create: (_) => NewsProvider()),
         ChangeNotifierProvider(create: (_) => SeasonProvider()),
       ],
       child: MaterialApp(
