@@ -3,7 +3,10 @@
     {
       "id": "LIV",
       "name": "리버풀",
-      "manager": "아르네 슬롯",
+      "manager": {
+        "name": "아르네 슬롯",
+        "country": "네덜란드"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -48,7 +51,10 @@
     {
       "id": "TOT",
       "name": "토트넘",
-      "manager": "엔지 포스테코글루",
+      "manager": {
+        "name": "엔지 포스테코글루",
+        "country": "호주"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
