@@ -5,7 +5,8 @@
       "name": "리버풀",
       "manager": {
         "name": "아르네 슬롯",
-        "country": "네덜란드"
+        "countryName": "네덜란드",
+        "countryCode": "NL"
       },
       "league": {
         "id": "PR",
@@ -15,7 +16,11 @@
     {
       "id": "MCI",
       "name": "맨시티",
-      "manager": "펩 과르디올라",
+      "manager": {
+        "name": "펩 과르디올라",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -24,7 +29,11 @@
     {
       "id": "CHE",
       "name": "첼시",
-      "manager": "엔초 마레스카",
+      "manager": {
+        "name": "엔초 마레스카",
+        "countryName": "이탈리아",
+        "countryCode": "IT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -33,7 +42,11 @@
     {
       "id": "ARS",
       "name": "아스널",
-      "manager": "미켈 아르테타",
+      "manager": {
+        "name": "미켈 아르테타",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -42,7 +55,11 @@
     {
       "id": "BHA",
       "name": "브라이튼",
-      "manager": "파비안 휘르첼러",
+      "manager": {
+        "name": "파비안 휘르첼러",
+        "countryName": "미국",
+        "countryCode": "US"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -53,7 +70,8 @@
       "name": "토트넘",
       "manager": {
         "name": "엔지 포스테코글루",
-        "country": "호주"
+        "countryName": "호주",
+        "countryCode": "AU"
       },
       "league": {
         "id": "PR",
@@ -63,7 +81,11 @@
     {
       "id": "NOT",
       "name": "노팅엄",
-      "manager": "누누 에스피리투 산투",
+      "manager": {
+        "name": "누누 에스피리투 산투",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -72,7 +94,11 @@
     {
       "id": "AVL",
       "name": "애스턴 빌라",
-      "manager": "우나이 에메리",
+      "manager": {
+        "name": "우나이 에메리",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -81,7 +107,11 @@
     {
       "id": "FUL",
       "name": "풀럼",
-      "manager": "마르코 실바",
+      "manager": {
+        "name": "마르코 실바",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -90,7 +120,11 @@
     {
       "id": "NEW",
       "name": "뉴캐슬",
-      "manager": "에디 하우",
+      "manager": {
+        "name": "에디 하우",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -99,7 +133,11 @@
     {
       "id": "BRE",
       "name": "브렌트퍼드",
-      "manager": "토마스 프랭크",
+      "manager": {
+        "name": "토마스 프랭크",
+        "countryName": "덴마크",
+        "countryCode": "DE"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -108,7 +146,11 @@
     {
       "id": "MNU",
       "name": "맨유",
-      "manager": "루벤 아모림",
+      "manager": {
+        "name": "후벵 아모링",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -117,7 +159,11 @@
     {
       "id": "BOU",
       "name": "본머스",
-      "manager": "안도니 이라올라",
+      "manager": {
+        "name": "안도니 이라올라",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -126,7 +172,11 @@
     {
       "id": "WHU",
       "name": "웨스트햄",
-      "manager": "훌렌 로페테기",
+      "manager": {
+        "name": "훌렌 로페테기",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -135,7 +185,11 @@
     {
       "id": "EVE",
       "name": "에버턴",
-      "manager": "션 다이치",
+      "manager": {
+        "name": "션 다이치",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -144,7 +198,11 @@
     {
       "id": "LEI",
       "name": "레스터 시티",
-      "manager": "",
+      "manager": {
+        "name": "뤼트 판니스텔로이",
+        "countryName": "네덜란드",
+        "countryCode": "NL"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -153,7 +211,11 @@
     {
       "id": "WOL",
       "name": "울버햄턴",
-      "manager": "게리 오닐",
+      "manager": {
+        "name": "비토르 페레이라",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -162,7 +224,11 @@
     {
       "id": "IPW",
       "name": "입스위치",
-      "manager": "키어런 맥케나",
+      "manager": {
+        "name": "키어런 맥케나",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -171,7 +237,11 @@
     {
       "id": "CRY",
       "name": "팰리스",
-      "manager": "올리버 글라스너",
+      "manager": {
+        "name": "올리버 글라스너",
+        "countryName": "오스트리아",
+        "countryCode": "AT"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -180,7 +250,11 @@
     {
       "id": "SOU",
       "name": "사우샘프턴",
-      "manager": "러셀 마틴",
+      "manager": {
+        "name": "이반 유리치",
+        "countryName": "크로아티아",
+        "countryCode": "HR"
+      },
       "league": {
         "id": "PR",
         "name": "프리미어리그"
@@ -189,7 +263,11 @@
     {
       "id": "BAY",
       "name": "바이에른 뮌헨",
-      "manager": "빈센트 콤파니",
+      "manager": {
+        "name": "뱅상 콤파니",
+        "countryName": "벨기에",
+        "countryCode": "BE"
+      },
       "league": {
         "id": "BL1",
         "name": "분데스리가"
