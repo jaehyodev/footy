@@ -10,6 +10,7 @@ import 'package:frontend/providers/following_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
 import 'package:frontend/providers/news_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
+import 'package:frontend/providers/team_provider.dart';
 import 'package:frontend/screens/following/following_screen.dart';
 import 'package:frontend/screens/home/home_screen.dart';
 import 'package:frontend/screens/league/league_screen.dart';
@@ -31,6 +32,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => LeagueProvider()),
         ChangeNotifierProvider(create: (_) => NewsProvider()),
         ChangeNotifierProvider(create: (_) => SeasonProvider()),
+        ChangeNotifierProvider(create: (_) => TeamProvider()),
       ],
       child: MaterialApp(
         home: const MyApp(),
@@ -56,7 +58,7 @@ class _MyAppState extends State<MyApp> {
   final String appName = Constants.appName;
 
   // 선택된 화면의 인덱스
-  int _selectedIndex = 0;
+  int _selectedIndex = 3;
   // 앱바 제목
   String _appBarTitle = Constants.appBarTitles[0];
   // 현재 홈 화면인지 여부
