@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:frontend/models/league.dart';
-import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/screens/home/widgets/matches_list_item.dart';
 import 'package:frontend/services/matches_service.dart';
+import 'package:frontend/utils/loader_overlay.dart';
 
 class MatchesList extends StatefulWidget {
   const MatchesList({super.key});
@@ -15,10 +15,10 @@ class MatchesList extends StatefulWidget {
 
 class _MatchesListState extends State<MatchesList> {
   bool isLoading = false;
-  List<Map<String, dynamic>> matches = []; // 리그 및 날짜에 따라 경기 일정을 저장
-  late String previousLeagueCode; // 이전 리그 코드
-  late DateTime previousSelectedDate; // 이전 날짜
-  Map<String, bool> expandedLeagues = {}; // 리그별 확장 상태 관리
+  List<Map<String, dynamic>> matches = [];
+  late String previousLeagueCode;
+  late DateTime previousSelectedDate;
+  Map<String, bool> expandedLeagues = {};
 
   @override
   void initState() {
@@ -48,38 +48,31 @@ class _MatchesListState extends State<MatchesList> {
 
   Future<void> fetchMatches(String leagueCode, DateTime dateTime) async {
     setState(() => isLoading = true);
+    LoaderOverlay.show(context); // 로딩 표시
     try {
       final fetchedMatches =
           await MatchesService.fetchMatches(leagueCode, dateTime);
       if (mounted) {
-        // 위젯이 트리에 있으면 setState 호출
         setState(() => matches = fetchedMatches);
       }
     } catch (e) {
       print("Error: $e");
     } finally {
       if (mounted) {
-        // 위젯이 트리에 있으면 setState 호출
         setState(() => isLoading = false);
+        LoaderOverlay.hide(); // 로딩 숨김
       }
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // leagueCode와 matches 상태를 가져옵니다.
     final leagueCode = context.watch<LeagueProvider>().selectedLeagueCode;
-
-    // matches가 비어있고 로딩 중이지 않다면 "경기가 없습니다." 표시
-    if (isLoading) {
-      return const Center(child: CircularProgressIndicator());
-    }
 
     if (matches.isEmpty) {
       return const Center(child: Text("경기가 없습니다."));
     }
 
-    // leagueCode가 "ALL"인 경우와 그렇지 않은 경우에 따른 화면 분기
     if (leagueCode == "ALL") {
       return buildAllLeaguesView();
     } else {
@@ -88,7 +81,6 @@ class _MatchesListState extends State<MatchesList> {
   }
 
   Widget buildAllLeaguesView() {
-    // 리그별로 경기를 그룹화
     final groupedMatches = <String, List<Map<String, dynamic>>>{};
     for (var match in matches) {
       final leagueName = match['competition']['name'];
@@ -98,7 +90,6 @@ class _MatchesListState extends State<MatchesList> {
       groupedMatches[leagueName]!.add(match);
     }
 
-    // 리그별로 출력
     return Expanded(
       child: ListView.builder(
         itemCount: groupedMatches.length,
@@ -107,7 +98,6 @@ class _MatchesListState extends State<MatchesList> {
           final leagueMatches = groupedMatches[leagueName]!;
           final isExpanded = expandedLeagues[leagueName] ?? false;
 
-          // 리그 아이템
           return Container(
             margin: const EdgeInsets.only(top: 16.0),
             decoration: BoxDecoration(
@@ -154,8 +144,6 @@ class _MatchesListState extends State<MatchesList> {
                     });
                   },
                 ),
-
-                // 리그 안의 경기 일정 아이템
                 if (isExpanded)
                   Column(
                     children: [
@@ -195,7 +183,6 @@ class _MatchesListState extends State<MatchesList> {
 
   Widget buildSpecificLeagueView() {
     return Expanded(
-      // Expanded로 감싸서 Column에 충분한 공간을 제공
       child: ListView.builder(
         itemCount: matches.length,
         itemBuilder: (context, index) {

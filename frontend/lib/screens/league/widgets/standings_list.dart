@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/utils/loader_overlay.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/providers/league_provider.dart';
@@ -15,7 +16,6 @@ class StandingsList extends StatefulWidget {
 }
 
 class _StandingsListState extends State<StandingsList> {
-  bool isLoading = false;
   List<Map<String, dynamic>> standings = [];
   late String previousLeagueCode;
   late int previousSeason;
@@ -46,7 +46,7 @@ class _StandingsListState extends State<StandingsList> {
   }
 
   Future<void> fetchStandings(String leagueCode, int season) async {
-    setState(() => isLoading = true);
+    LoaderOverlay.show(context); // 로딩 시작 시 오버레이 표시
     try {
       final fetchedStandings =
           await LeaguesService.fetchLeague(leagueCode, season);
@@ -59,23 +59,13 @@ class _StandingsListState extends State<StandingsList> {
       print('standings_list.dart | 순위 데이터 가져오기 에러: $e');
     } finally {
       if (mounted) {
-        setState(() => isLoading = false);
+        LoaderOverlay.hide(); // 로딩 완료 후 오버레이 숨김
       }
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // 로딩 중 표시
-    if (isLoading) {
-      return const Center(child: CircularProgressIndicator());
-    }
-
-    // 순위가 비어있는 경우 처리
-    if (standings.isEmpty) {
-      return const Center(child: Text('순위 데이터가 없습니다.'));
-    }
-
     // 순위 리스트 출력
     return Expanded(
       child: ListView.builder(
