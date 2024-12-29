@@ -60,7 +60,7 @@ class _TeamSquadState extends State<TeamSquad> {
         // eSquad에서 해당 선수의 photo를 찾기
         String playerPhoto = '';
         for (var ePlayer in eSquad!.players) {
-          if (ePlayer.number.toString() == player['uniformNumber'].toString()) {
+          if (ePlayer.number.toString() == player['number'].toString()) {
             playerPhoto = ePlayer.photo;
             break;
           }
