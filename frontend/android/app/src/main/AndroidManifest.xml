@@ -2,7 +2,7 @@
     <!-- Add this line for internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:label="frontend"
+        android:label="푸티"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

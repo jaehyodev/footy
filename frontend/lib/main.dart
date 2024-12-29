@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:frontend/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
@@ -35,7 +36,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => TeamProvider()),
       ],
       child: MaterialApp(
-        home: const MyApp(),
+        home: const SplashScreen(), // 첫 화면으로 SplashScreen 설
         theme: AppStyle.theme,
       ),
     ),
@@ -50,19 +51,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
   final String appName = Constants.appName;
 
   // 선택된 화면의 인덱스
-  int _selectedIndex = 3;
+  int _selectedIndex = 0;
   // 앱바 제목
   String _appBarTitle = Constants.appBarTitles[0];
   // 현재 홈 화면인지 여부
   bool _isHomePage = true;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   // 화면을 전환하는 함수
   void _onItemTapped(int index) {
