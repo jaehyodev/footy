@@ -129,13 +129,17 @@ class _MyAppState extends State<MyApp> {
                       return IconButton(
                         icon: Icon(
                           provider.isEditing ? Icons.check : Icons.edit,
+                          color: Colors.white,
                         ),
                         onPressed: provider.toggleEditMode,
                       );
                     },
                   ),
                   IconButton(
-                    icon: const Icon(Icons.add),
+                    icon: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
                     onPressed: () => showSearchModal(context),
                   ),
                 ]
