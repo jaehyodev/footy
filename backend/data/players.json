@@ -2,7 +2,7 @@
   "players": [
     {
       "id": "TOT1",
-      "teamId": 48,
+      "teamId": 47,
       "name": "굴리엘모 비카리오",
       "uniformNumber": "1",
       "position": "GK",
@@ -13,7 +13,7 @@
     },
     {
       "id": "TOT3",
-      "teamId": 48,
+      "teamId": 47,
       "name": "세르히오 레길론",
       "uniformNumber": "3",
       "position": "DF",
@@ -24,7 +24,7 @@
     },
     {
       "id": "TOT6",
-      "teamId": 48,
+      "teamId": 47,
       "name": "라두 드라구신",
       "uniformNumber": "6",
       "position": "DF",
@@ -35,7 +35,7 @@
     },
     {
       "id": "TOT7",
-      "teamId": 48,
+      "teamId": 47,
       "name": "손흥민",
       "uniformNumber": "7",
       "position": "FW",
@@ -46,7 +46,7 @@
     },
     {
       "id": "TOT8",
-      "teamId": 48,
+      "teamId": 47,
       "name": "이브 비수마",
       "uniformNumber": "8",
       "position": "MF",
@@ -57,7 +57,7 @@
     },
     {
       "id": "TOT9",
-      "teamId": 48,
+      "teamId": 47,
       "name": "히샬리송",
       "uniformNumber": "9",
       "position": "FW",
@@ -68,7 +68,7 @@
     },
     {
       "id": "TOT10",
-      "teamId": 48,
+      "teamId": 47,
       "name": "제임스 매디슨",
       "uniformNumber": "10",
       "position": "MF",
@@ -79,7 +79,7 @@
     },
     {
       "id": "TOT13",
-      "teamId": 48,
+      "teamId": 47,
       "name": "데스티니 우도기",
       "uniformNumber": "13",
       "position": "DF",
@@ -90,7 +90,7 @@
     },
     {
       "id": "TOT14",
-      "teamId": 48,
+      "teamId": 47,
       "name": "아치 그레이",
       "uniformNumber": "14",
       "position": "MF",
@@ -101,7 +101,7 @@
     },
     {
       "id": "TOT15",
-      "teamId": 48,
+      "teamId": 47,
       "name": "루카스 베리발",
       "uniformNumber": "15",
       "position": "MF",
@@ -112,7 +112,7 @@
     },
     {
       "id": "TOT16",
-      "teamId": 48,
+      "teamId": 47,
       "name": "티모 베르너",
       "uniformNumber": "16",
       "position": "FW",
@@ -123,7 +123,7 @@
     },
     {
       "id": "TOT17",
-      "teamId": 48,
+      "teamId": 47,
       "name": "크리스티안 로메로",
       "uniformNumber": "17",
       "position": "DF",
@@ -134,7 +134,7 @@
     },
     {
       "id": "TOT19",
-      "teamId": 48,
+      "teamId": 47,
       "name": "도미닉 솔랑케",
       "uniformNumber": "19",
       "position": "FW",
@@ -145,7 +145,7 @@
     },
     {
       "id": "TOT20",
-      "teamId": 48,
+      "teamId": 47,
       "name": "프레이저 포스터",
       "uniformNumber": "20",
       "position": "GK",
@@ -156,7 +156,7 @@
     },
     {
       "id": "TOT21",
-      "teamId": 48,
+      "teamId": 47,
       "name": "데얀 쿨루셉스키",
       "uniformNumber": "21",
       "position": "MF",
@@ -167,7 +167,7 @@
     },
     {
       "id": "TOT22",
-      "teamId": 48,
+      "teamId": 47,
       "name": "브레넌 존슨",
       "uniformNumber": "22",
       "position": "FW",
@@ -178,7 +178,7 @@
     },
     {
       "id": "TOT23",
-      "teamId": 48,
+      "teamId": 47,
       "name": "페드로 포로",
       "uniformNumber": "23",
       "position": "DF",
@@ -189,7 +189,7 @@
     },
     {
       "id": "TOT24",
-      "teamId": 48,
+      "teamId": 47,
       "name": "제드 스펜스",
       "uniformNumber": "24",
       "position": "DF",
@@ -200,7 +200,7 @@
     },
     {
       "id": "TOT28",
-      "teamId": 48,
+      "teamId": 47,
       "name": "윌손 오도베르",
       "uniformNumber": "28",
       "position": "FW",
@@ -211,7 +211,7 @@
     },
     {
       "id": "TOT29",
-      "teamId": 48,
+      "teamId": 47,
       "name": "파페 마타르 사르",
       "uniformNumber": "29",
       "position": "MF",
@@ -222,7 +222,7 @@
     },
     {
       "id": "TOT30",
-      "teamId": 48,
+      "teamId": 47,
       "name": "로드리고 벤탄쿠르",
       "uniformNumber": "30",
       "position": "MF",
@@ -233,7 +233,7 @@
     },
     {
       "id": "TOT33",
-      "teamId": 48,
+      "teamId": 47,
       "name": "벤 데이비스",
       "uniformNumber": "33",
       "position": "DF",
@@ -244,7 +244,7 @@
     },
     {
       "id": "TOT37",
-      "teamId": 48,
+      "teamId": 47,
       "name": "미키 판더펜",
       "uniformNumber": "37",
       "position": "DF",
@@ -255,7 +255,7 @@
     },
     {
       "id": "TOT40",
-      "teamId": 48,
+      "teamId": 47,
       "name": "브랜던 오스틴",
       "uniformNumber": "40",
       "position": "GK",
@@ -266,7 +266,7 @@
     },
     {
       "id": "TOT41",
-      "teamId": 48,
+      "teamId": 47,
       "name": "알피 화이트먼",
       "uniformNumber": "41",
       "position": "GK",

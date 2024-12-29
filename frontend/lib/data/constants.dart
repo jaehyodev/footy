@@ -22,7 +22,7 @@ class Constants {
       color: '#E50007',
     ),
     Team(
-      id: 47,
+      id: 66,
       tla: 'AVL',
       name: '애스턴 빌라',
       shortName: '애스턴 빌라',
@@ -175,7 +175,7 @@ class Constants {
       color: '#ED1A3B',
     ),
     Team(
-      id: 48,
+      id: 47,
       tla: 'TOT',
       name: '토트넘 홋스퍼',
       shortName: '토트넘',
@@ -184,7 +184,7 @@ class Constants {
       color: '#0B1C56',
     ),
     Team(
-      id: 41,
+      id: 48,
       tla: 'WHU',
       name: '웨스트햄 유나이티드',
       shortName: '웨스트햄',
