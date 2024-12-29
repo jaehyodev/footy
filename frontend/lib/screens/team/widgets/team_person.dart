@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
+import 'package:frontend/providers/team_provider.dart';
 import 'package:gap/gap.dart';
+import 'package:provider/provider.dart';
 
 class TeamPerson extends StatelessWidget {
   final dynamic player;

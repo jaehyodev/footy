@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:frontend/models/player_in_korean.dart';
 import 'package:http/http.dart' as http;
+
+import 'package:frontend/models/manager.dart';
 
 import 'package:frontend/models/squad_response.dart';
 
@@ -48,6 +49,38 @@ class TeamService {
           .toList();
     } else {
       throw Exception('Failed to load players');
+    }
+  }
+
+  // 특정 팀의 매니저를 가져오는 메서드 (영어)
+  Future<Manager?> fetchManager(int teamId) async {
+    final String apiKey = dotenv.env['API_FOOTBALL_KEY'] ?? 'No API Key';
+    final url =
+        Uri.parse('https://v3.football.api-sports.io/coachs?team=$teamId');
+
+    final response = await http.get(
+      url,
+      headers: {
+        'x-rapidapi-host': 'v3.football.api-sports.io',
+        'x-rapidapi-key': apiKey,
+      },
+    );
+
+    if (response.statusCode == 200) {
+      // 응답이 성공적이면, JSON 데이터를 반환
+      final data = json.decode(response.body);
+      print("감독: ${data['response']}");
+      // 감독 정보가 있는지 확인 후, 해당 정보를 반환
+      if (data['response'] != null && data['response'].isNotEmpty) {
+        return Manager.fromJson(data['response'][0]); // Coach 모델로 변환하여 반환
+      } else {
+        print('감독 정보를 찾을 수 없습니다.');
+        return null;
+      }
+    } else {
+      // 오류가 발생하면 null 반환
+      print('API 요청 실패: ${response.statusCode}');
+      return null;
     }
   }
 
