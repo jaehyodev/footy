@@ -562,7 +562,7 @@
     },
     {
       "id": "BAY1",
-      "teamId": 21,
+      "teamId": 19,
       "name": "마누엘 노이어",
       "uniformNumber": "1",
       "position": "GK",
@@ -573,7 +573,7 @@
     },
     {
       "id": "BAY2",
-      "teamId": 21,
+      "teamId": 19,
       "name": "다요 우파메카노",
       "uniformNumber": "2",
       "position": "DF",
@@ -584,7 +584,7 @@
     },
     {
       "id": "BAY3",
-      "teamId": 21,
+      "teamId": 19,
       "name": "김민재",
       "uniformNumber": "3",
       "position": "DF",
@@ -595,7 +595,7 @@
     },
     {
       "id": "BAY6",
-      "teamId": 21,
+      "teamId": 19,
       "name": "요주아 키미히",
       "uniformNumber": "6",
       "position": "MF",
@@ -606,7 +606,7 @@
     },
     {
       "id": "BAY7",
-      "teamId": 21,
+      "teamId": 19,
       "name": "세르주 그나브리",
       "uniformNumber": "7",
       "position": "FW",
@@ -617,7 +617,7 @@
     },
     {
       "id": "BAY8",
-      "teamId": 21,
+      "teamId": 19,
       "name": "레온 고레츠카",
       "uniformNumber": "8",
       "position": "MF",
@@ -628,7 +628,7 @@
     },
     {
       "id": "BAY9",
-      "teamId": 21,
+      "teamId": 19,
       "name": "해리 케인",
       "uniformNumber": "9",
       "position": "FW",
@@ -639,7 +639,7 @@
     },
     {
       "id": "BAY10",
-      "teamId": 21,
+      "teamId": 19,
       "name": "리로이 사네",
       "uniformNumber": "10",
       "position": "FW",
@@ -650,7 +650,7 @@
     },
     {
       "id": "BAY11",
-      "teamId": 21,
+      "teamId": 19,
       "name": "킹슬리 코망",
       "uniformNumber": "11",
       "position": "FW",
@@ -661,7 +661,7 @@
     },
     {
       "id": "BAY15",
-      "teamId": 21,
+      "teamId": 19,
       "name": "에릭 다이어",
       "uniformNumber": "15",
       "position": "DF",
@@ -672,7 +672,7 @@
     },
     {
       "id": "BAY16",
-      "teamId": 21,
+      "teamId": 19,
       "name": "주앙 팔리냐",
       "uniformNumber": "16",
       "position": "MF",
@@ -683,7 +683,7 @@
     },
     {
       "id": "BAY17",
-      "teamId": 21,
+      "teamId": 19,
       "name": "마이클 올리세",
       "uniformNumber": "17",
       "position": "FW",
@@ -694,7 +694,7 @@
     },
     {
       "id": "BAY18",
-      "teamId": 21,
+      "teamId": 19,
       "name": "다니엘 페레츠",
       "uniformNumber": "18",
       "position": "GK",
@@ -705,7 +705,7 @@
     },
     {
       "id": "BAY19",
-      "teamId": 21,
+      "teamId": 19,
       "name": "알폰소 데이비스",
       "uniformNumber": "19",
       "position": "DF",
@@ -716,7 +716,7 @@
     },
     {
       "id": "BAY20",
-      "teamId": 21,
+      "teamId": 19,
       "name": "아리욘 이브라히모비치",
       "uniformNumber": "20",
       "position": "MF",
@@ -727,7 +727,7 @@
     },
     {
       "id": "BAY21",
-      "teamId": 21,
+      "teamId": 19,
       "name": "이토 히로키",
       "uniformNumber": "21",
       "position": "DF",
@@ -738,7 +738,7 @@
     },
     {
       "id": "BAY22",
-      "teamId": 21,
+      "teamId": 19,
       "name": "라파엘 게헤이루",
       "uniformNumber": "22",
       "position": "DF",
@@ -749,7 +749,7 @@
     },
     {
       "id": "BAY23",
-      "teamId": 21,
+      "teamId": 19,
       "name": "사샤 보이",
       "uniformNumber": "23",
       "position": "DF",
@@ -760,7 +760,7 @@
     },
     {
       "id": "BAY25",
-      "teamId": 21,
+      "teamId": 19,
       "name": "토마스 뮐러",
       "uniformNumber": "25",
       "position": "FW",
@@ -771,7 +771,7 @@
     },
     {
       "id": "BAY26",
-      "teamId": 21,
+      "teamId": 19,
       "name": "스벤 울라이히",
       "uniformNumber": "26",
       "position": "GK",
@@ -782,7 +782,7 @@
     },
     {
       "id": "BAY27",
-      "teamId": 21,
+      "teamId": 19,
       "name": "콘라트 라이머",
       "uniformNumber": "27",
       "position": "MF",
@@ -793,7 +793,7 @@
     },
     {
       "id": "BAY28",
-      "teamId": 21,
+      "teamId": 19,
       "name": "타레크 부흐만",
       "uniformNumber": "28",
       "position": "DF",
@@ -804,7 +804,7 @@
     },
     {
       "id": "BAY39",
-      "teamId": 21,
+      "teamId": 19,
       "name": "마티스 텔",
       "uniformNumber": "39",
       "position": "FW",
@@ -815,7 +815,7 @@
     },
     {
       "id": "BAY42",
-      "teamId": 21,
+      "teamId": 19,
       "name": "자말 무시알라",
       "uniformNumber": "42",
       "position": "MF",
@@ -826,7 +826,7 @@
     },
     {
       "id": "BAY44",
-      "teamId": 21,
+      "teamId": 19,
       "name": "요시프 스타니시치",
       "uniformNumber": "44",
       "position": "DF",
@@ -837,7 +837,7 @@
     },
     {
       "id": "BAY45",
-      "teamId": 21,
+      "teamId": 19,
       "name": "알렉산다르 파블로비치",
       "uniformNumber": "45",
       "position": "MF",
