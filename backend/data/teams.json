@@ -1,6 +1,81 @@
 {
   "teams": [
     {
+      "id": 33,
+      "tla": "MNU",
+      "name": "맨체스터 유나이티드",
+      "shortName": "맨유",
+      "manager": {
+        "name": "루벤 아모림",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 34,
+      "tla": "NEW",
+      "name": "뉴캐슬 유나이티드",
+      "shortName": "뉴캐슬",
+      "manager": {
+        "name": "에디 하우",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 35,
+      "tla": "BOU",
+      "name": "AFC 본머스",
+      "shortName": "본머스",
+      "manager": {
+        "name": "안도니 이라올라",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 36,
+      "tla": "FUL",
+      "name": "풀럼",
+      "shortName": "풀럼",
+      "manager": {
+        "name": "마르코 실바",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 39,
+      "tla": "WOL",
+      "name": "울버햄턴",
+      "shortName": "울버햄턴 원더러스",
+      "manager": {
+        "name": "비토르 페레이라",
+        "countryName": "포르투갈",
+        "countryCode": "PT"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
       "id": 40,
       "tla": "LIV",
       "name": "리버풀",
@@ -16,12 +91,87 @@
       }
     },
     {
-      "id": 50,
-      "tla": "MCI",
-      "name": "맨체스터 시티",
-      "shortName": "맨시티",
+      "id": 41,
+      "tla": "SOU",
+      "name": "사우샘프턴",
+      "shortName": "사우샘프턴",
       "manager": {
-        "name": "펩 과르디올라",
+        "name": "이반 유리치",
+        "countryName": "크로아티아",
+        "countryCode": "HR"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 42,
+      "tla": "ARS",
+      "name": "아스널",
+      "shortName": "아스널",
+      "manager": {
+        "name": "미켈 아르테타",
+        "countryName": "스페인",
+        "countryCode": "ES"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 45,
+      "tla": "EVE",
+      "name": "에버턴",
+      "shortName": "에버턴",
+      "manager": {
+        "name": "션 다이치",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 46,
+      "tla": "LEI",
+      "name": "레스터 시티",
+      "shortName": "레스터 시티",
+      "manager": {
+        "name": "뤼트 판니스텔로이",
+        "countryName": "네덜란드",
+        "countryCode": "NL"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 47,
+      "tla": "TOT",
+      "name": "토트넘 홋스퍼",
+      "shortName": "토트넘",
+      "manager": {
+        "name": "엔지 포스테코글루",
+        "countryName": "호주",
+        "countryCode": "AU"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 48,
+      "tla": "WHU",
+      "name": "웨스트햄 유나이티드",
+      "shortName": "웨스트햄",
+      "manager": {
+        "name": "훌렌 로페테기",
         "countryName": "스페인",
         "countryCode": "ES"
       },
@@ -46,12 +196,12 @@
       }
     },
     {
-      "id": 42,
-      "tla": "ARS",
-      "name": "아스널",
-      "shortName": "아스널",
+      "id": 50,
+      "tla": "MCI",
+      "name": "맨체스터 시티",
+      "shortName": "맨시티",
       "manager": {
-        "name": "미켈 아르테타",
+        "name": "펩 과르디올라",
         "countryName": "스페인",
         "countryCode": "ES"
       },
@@ -76,14 +226,14 @@
       }
     },
     {
-      "id": 47,
-      "tla": "TOT",
-      "name": "토트넘 홋스퍼",
-      "shortName": "토트넘",
+      "id": 52,
+      "tla": "CRY",
+      "name": "크리스탈 팰리스",
+      "shortName": "팰리스",
       "manager": {
-        "name": "엔지 포스테코글루",
-        "countryName": "호주",
-        "countryCode": "AU"
+        "name": "올리버 글라스너",
+        "countryName": "오스트리아",
+        "countryCode": "AT"
       },
       "league": {
         "code": "PR",
@@ -91,7 +241,37 @@
       }
     },
     {
-      "id": 45,
+      "id": 55,
+      "tla": "BRE",
+      "name": "브렌트퍼드",
+      "shortName": "브렌트퍼드",
+      "manager": {
+        "name": "토마스 프랭크",
+        "countryName": "덴마크",
+        "countryCode": "DE"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 57,
+      "tla": "IPW",
+      "name": "입스위치",
+      "shortName": "입스위치 타운",
+      "manager": {
+        "name": "키어런 맥케나",
+        "countryName": "잉글랜드",
+        "countryCode": "GB-ENG"
+      },
+      "league": {
+        "code": "PR",
+        "name": "프리미어리그"
+      }
+    },
+    {
+      "id": 65,
       "tla": "NOT",
       "name": "노팅엄 포레스트",
       "shortName": "노팅엄",
@@ -121,187 +301,7 @@
       }
     },
     {
-      "id": 46,
-      "tla": "FUL",
-      "name": "풀럼",
-      "shortName": "풀럼",
-      "manager": {
-        "name": "마르코 실바",
-        "countryName": "포르투갈",
-        "countryCode": "PT"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 44,
-      "tla": "NEW",
-      "name": "뉴캐슬 유나이티드",
-      "shortName": "뉴캐슬",
-      "manager": {
-        "name": "에디 하우",
-        "countryName": "잉글랜드",
-        "countryCode": "GB-ENG"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 52,
-      "tla": "BRE",
-      "name": "브렌트퍼드",
-      "shortName": "브렌트퍼드",
-      "manager": {
-        "name": "토마스 프랭크",
-        "countryName": "덴마크",
-        "countryCode": "DE"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 33,
-      "tla": "MNU",
-      "name": "맨체스터 유나이티드",
-      "shortName": "맨유",
-      "manager": {
-        "name": "루벤 아모림",
-        "countryName": "포르투갈",
-        "countryCode": "PT"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 43,
-      "tla": "BOU",
-      "name": "AFC 본머스",
-      "shortName": "본머스",
-      "manager": {
-        "name": "안도니 이라올라",
-        "countryName": "스페인",
-        "countryCode": "ES"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 48,
-      "tla": "WHU",
-      "name": "웨스트햄 유나이티드",
-      "shortName": "웨스트햄",
-      "manager": {
-        "name": "훌렌 로페테기",
-        "countryName": "스페인",
-        "countryCode": "ES"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 53,
-      "tla": "EVE",
-      "name": "에버턴",
-      "shortName": "에버턴",
-      "manager": {
-        "name": "션 다이치",
-        "countryName": "잉글랜드",
-        "countryCode": "GB-ENG"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 54,
-      "tla": "LEI",
-      "name": "레스터 시티",
-      "shortName": "레스터 시티",
-      "manager": {
-        "name": "뤼트 판니스텔로이",
-        "countryName": "네덜란드",
-        "countryCode": "NL"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 55,
-      "tla": "WOL",
-      "name": "울버햄턴",
-      "shortName": "울버햄턴 원더러스",
-      "manager": {
-        "name": "비토르 페레이라",
-        "countryName": "포르투갈",
-        "countryCode": "PT"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 56,
-      "tla": "IPW",
-      "name": "입스위치",
-      "shortName": "입스위치 타운",
-      "manager": {
-        "name": "키어런 맥케나",
-        "countryName": "잉글랜드",
-        "countryCode": "GB-ENG"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 57,
-      "tla": "CRY",
-      "name": "크리스탈 팰리스",
-      "shortName": "팰리스",
-      "manager": {
-        "name": "올리버 글라스너",
-        "countryName": "오스트리아",
-        "countryCode": "AT"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 58,
-      "tla": "SOU",
-      "name": "사우샘프턴",
-      "shortName": "사우샘프턴",
-      "manager": {
-        "name": "이반 유리치",
-        "countryName": "크로아티아",
-        "countryCode": "HR"
-      },
-      "league": {
-        "code": "PR",
-        "name": "프리미어리그"
-      }
-    },
-    {
-      "id": 19,
+      "id": 157,
       "tla": "BAY",
       "name": "바이에른 뮌헨",
       "shortName": "뭰헨",
