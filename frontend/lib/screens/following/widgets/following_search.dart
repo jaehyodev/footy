@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/providers/following_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gap/gap.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/models/team.dart';
@@ -85,7 +83,7 @@ class FollowingSearchState extends State<FollowingSearch> {
             itemBuilder: (context, index) {
               final team = filteredTeams[index];
               final isFollowing =
-                  followingProvider.followingTeams.contains(team.name);
+                  followingProvider.followingTeams.contains(team.id);
 
               return ListTile(
                 leading: Image.asset(
@@ -100,7 +98,7 @@ class FollowingSearchState extends State<FollowingSearch> {
                     color: isFollowing ? Colors.red : null,
                   ),
                   onPressed: () {
-                    followingProvider.toggleFollow(team.name);
+                    followingProvider.toggleFollow(team.id);
                   },
                 ),
               );
