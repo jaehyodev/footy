@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../screens/home/themes/leagues_list_styles.dart';
-import '../models/league.dart';
-import '../providers/league_provider.dart';
 
-class LeaguesList extends StatefulWidget {
-  final bool includesAll;
+import 'package:frontend/models/league.dart';
+import 'package:frontend/providers/home_league_provider.dart';
+import 'package:frontend/screens/home/themes/leagues_list_styles.dart';
 
-  const LeaguesList({
-    super.key,
-    required this.includesAll,
-  });
+class HomeLeaguesList extends StatefulWidget {
+  const HomeLeaguesList({super.key});
 
   @override
-  LeaguesListState createState() => LeaguesListState();
+  HomeLeaguesListState createState() => HomeLeaguesListState();
 }
 
-class LeaguesListState extends State<LeaguesList> {
+class HomeLeaguesListState extends State<HomeLeaguesList> {
   int _selectedIndex = 0;
   bool _isInitialized = false;
 
@@ -31,23 +27,15 @@ class LeaguesListState extends State<LeaguesList> {
     // 화면 전환할 때마다 초기화
     // 화면에 처음 들어왔을 때 한 번만 실행
     if (!_isInitialized) {
-      if (widget.includesAll) {
-        context.read<LeagueProvider>().resetSelectionForHome();
-      } else {
-        context.read<LeagueProvider>().resetSelectionForLeague();
-      }
+      context.read<HomeLeagueProvider>().resetHomeLeague();
       _isInitialized = true;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // widget.includesAll 값에 따라 사용할 리스트를 결정
-    // 홈 화면은 전체 리그를 포함
-    // 리그 화면은 전체 리그를 포함하지 않음
-    List<League> leaguesToShow = widget.includesAll
-        ? context.watch<LeagueProvider>().leaguesIncludingAll
-        : context.watch<LeagueProvider>().leaguesExcludingAll;
+    List<League> leaguesToShow =
+        context.watch<HomeLeagueProvider>().leaguesIncludingAll;
 
     return Container(
       color: LeaguesListStyles.backgroundColor,
@@ -63,14 +51,14 @@ class LeaguesListState extends State<LeaguesList> {
 
               return Padding(
                 padding: index == leaguesToShow.length - 1
-                    ? EdgeInsets.zero // 마지막 버튼에는 여백을 주지 않음
+                    ? EdgeInsets.zero
                     : const EdgeInsets.only(right: 4.0),
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
                       _selectedIndex = index;
                     });
-                    context.read<LeagueProvider>().updateLeague(
+                    context.read<HomeLeagueProvider>().updateHomeLeague(
                           index,
                           league.name,
                           league.code,

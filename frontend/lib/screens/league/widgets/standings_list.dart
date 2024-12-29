@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/utils/loader_overlay.dart';
 import 'package:provider/provider.dart';
 
-import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/league_league_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/models/standing.dart';
 import 'package:frontend/screens/league/widgets/standings_list_item.dart';
@@ -23,7 +23,7 @@ class _StandingsListState extends State<StandingsList> {
   @override
   void initState() {
     super.initState();
-    final leagueCode = context.read<LeagueProvider>().selectedLeagueCode;
+    final leagueCode = context.read<LeagueLeagueProvider>().selectedLeagueCode;
     final season = context.read<SeasonProvider>().selectedSeason;
 
     previousLeagueCode = leagueCode;
@@ -35,7 +35,7 @@ class _StandingsListState extends State<StandingsList> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final leagueCode = context.watch<LeagueProvider>().selectedLeagueCode;
+    final leagueCode = context.watch<LeagueLeagueProvider>().selectedLeagueCode;
     final season = context.watch<SeasonProvider>().selectedSeason;
 
     if (leagueCode != previousLeagueCode || season != previousSeason) {
@@ -46,7 +46,7 @@ class _StandingsListState extends State<StandingsList> {
   }
 
   Future<void> fetchStandings(String leagueCode, int season) async {
-    LoaderOverlay.show(context); // 로딩 시작 시 오버레이 표시
+    LoaderOverlay.show(context);
     try {
       final fetchedStandings =
           await LeaguesService.fetchLeague(leagueCode, season);
@@ -59,7 +59,7 @@ class _StandingsListState extends State<StandingsList> {
       print('standings_list.dart | 순위 데이터 가져오기 에러: $e');
     } finally {
       if (mounted) {
-        LoaderOverlay.hide(); // 로딩 완료 후 오버레이 숨김
+        LoaderOverlay.hide();
       }
     }
   }

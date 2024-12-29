@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:frontend/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/providers/following_provider.dart';
-import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/home_league_provider.dart';
+import 'package:frontend/providers/league_league_provider.dart';
 import 'package:frontend/providers/news_provider.dart';
 import 'package:frontend/providers/season_provider.dart';
 import 'package:frontend/providers/team_provider.dart';
@@ -17,6 +17,7 @@ import 'package:frontend/screens/home/home_screen.dart';
 import 'package:frontend/screens/league/league_screen.dart';
 import 'package:frontend/screens/news/news_screen.dart';
 import 'package:frontend/screens/settings/settings_screen.dart';
+import 'package:frontend/screens/splash_screen.dart';
 import 'package:frontend/themes/style.dart';
 import 'package:frontend/utils/modal_utils.dart';
 import 'package:frontend/widgets/custom_app_bar.dart';
@@ -30,7 +31,8 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => DateProvider()),
         ChangeNotifierProvider(create: (_) => FollowingProvider()),
-        ChangeNotifierProvider(create: (_) => LeagueProvider()),
+        ChangeNotifierProvider(create: (_) => HomeLeagueProvider()),
+        ChangeNotifierProvider(create: (_) => LeagueLeagueProvider()),
         ChangeNotifierProvider(create: (_) => NewsProvider()),
         ChangeNotifierProvider(create: (_) => SeasonProvider()),
         ChangeNotifierProvider(create: (_) => TeamProvider()),

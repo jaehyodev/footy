@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:frontend/providers/league_provider.dart';
+import 'package:frontend/providers/home_league_provider.dart';
 import 'package:frontend/providers/date_provider.dart';
 import 'package:frontend/screens/home/widgets/matches_list_item.dart';
 import 'package:frontend/services/matches_service.dart';
@@ -23,7 +23,7 @@ class _MatchesListState extends State<MatchesList> {
   @override
   void initState() {
     super.initState();
-    final leagueCode = context.read<LeagueProvider>().selectedLeagueCode;
+    final leagueCode = context.read<HomeLeagueProvider>().selectedLeagueCode;
     final selectedDate = context.read<DateProvider>().selectedDateTime;
 
     previousLeagueCode = leagueCode;
@@ -35,7 +35,7 @@ class _MatchesListState extends State<MatchesList> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final leagueCode = context.watch<LeagueProvider>().selectedLeagueCode;
+    final leagueCode = context.watch<HomeLeagueProvider>().selectedLeagueCode;
     final selectedDate = context.watch<DateProvider>().selectedDateTime;
 
     if (leagueCode != previousLeagueCode ||
@@ -67,16 +67,26 @@ class _MatchesListState extends State<MatchesList> {
 
   @override
   Widget build(BuildContext context) {
-    final leagueCode = context.watch<LeagueProvider>().selectedLeagueCode;
+    final leagueCode = context.watch<HomeLeagueProvider>().selectedLeagueCode;
 
-    if (matches.isEmpty) {
-      return const Center(child: Text("경기가 없습니다."));
+    if (matches.isEmpty && !isLoading) {
+      return const Expanded(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("경기가 없습니다."),
+          ],
+        ),
+      );
     }
 
     if (leagueCode == "ALL") {
       return buildAllLeaguesView();
-    } else {
+    } else if (!isLoading) {
       return buildSpecificLeagueView();
+    } else {
+      return const Text('');
     }
   }
 
