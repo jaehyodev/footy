@@ -1,12 +1,12 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/providers/team_provider.dart';
 import 'package:frontend/screens/team/widgets/team_person.dart';
 import 'package:frontend/services/team_service.dart';
+import 'package:frontend/utils/loader_overlay.dart';
 
 class TeamSquad extends StatefulWidget {
   const TeamSquad({super.key});
@@ -31,11 +31,20 @@ class _TeamSquadState extends State<TeamSquad> {
         Provider.of<TeamProvider>(context, listen: false).selectedTeam!.id;
 
     try {
+      // 로딩 표시 시작
+      LoaderOverlay.show(context);
+
       // 팀 정보 가져오기
       final team = await _teamService.fetchTeamInKorean(selectedTeamId);
       final players = await _teamService.fetchPlayersInKorean(selectedTeamId);
+
+      print('시작: eSquad 정보 요청');
       final eSquad = await _teamService.fetchSquadInEnglish(selectedTeamId);
+      print('eSquad 정보 가져옴: $eSquad');
+
+      print('시작: 감독 정보 요청');
       final manager = await _teamService.fetchManager(selectedTeamId);
+      print('감독 정보 가져옴: $manager');
 
       // 팀 정보에서 감독 정보를 _squad['Manager']에 넣기
       Map<String, List<dynamic>> squad = {
@@ -47,22 +56,28 @@ class _TeamSquadState extends State<TeamSquad> {
       };
 
       // 팀 정보에서 감독 정보 추가
-      squad['감독']!.add({
-        'name': team['manager']['name'],
-        'position': '감독',
-        'photo': manager!.photo,
-        'countryCode': team['manager']['countryCode'],
-        'countryName': team['manager']['countryName'],
-      });
+      if (manager != null && team['manager'] != null) {
+        squad['감독']!.add({
+          'name': team['manager']['name'],
+          'position': '감독',
+          'photo': manager.photo,
+          'countryCode': team['manager']['countryCode'],
+          'countryName': team['manager']['countryName'],
+        });
+        print('감독 정보 추가 완료');
+      } else {
+        print('감독 정보가 없습니다');
+      }
 
       // 선수 정보를 포지션별로 분류
       for (var player in players) {
-        // eSquad에서 해당 선수의 photo를 찾기
         String playerPhoto = '';
-        for (var ePlayer in eSquad!.players) {
-          if (ePlayer.number.toString() == player['number'].toString()) {
-            playerPhoto = ePlayer.photo;
-            break;
+        if (eSquad != null) {
+          for (var ePlayer in eSquad.players) {
+            if (ePlayer.number.toString() == player['number'].toString()) {
+              playerPhoto = ePlayer.photo;
+              break;
+            }
           }
         }
 
@@ -80,20 +95,26 @@ class _TeamSquadState extends State<TeamSquad> {
         }
       }
 
+      print('선수 정보 분류 완료');
       return squad;
     } catch (e) {
-      print('에러: $e');
+      print('에러 발생: $e');
       rethrow;
+    } finally {
+      // 로딩 표시 끝
+      LoaderOverlay.hide();
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Map<String, List<dynamic>>>(
+      // FutureBuilder로 squad 데이터 상태 처리
       future: _squad,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          // 이미 LoaderOverlay가 로딩을 표시하기 때문에, 여기에선 따로 표시하지 않습니다.
+          return const SizedBox(); // 여기에 로딩 표시 없이 공간만 확보
         }
 
         if (snapshot.hasError) {
