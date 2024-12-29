@@ -101,11 +101,18 @@ class TeamService {
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
 
-      // JSON 데이터를 잘리지 않게 출력
-      debugPrint(jsonEncode(data), wrapWidth: 1024); // 줄바꿈을 적용하여 출력
+      // JSON 데이터 확인
+      // debugPrint(jsonEncode(data), wrapWidth: 1024); // 전체 JSON 출력
 
-      // SquadResponse 객체로 변환하여 리턴
-      return SquadResponse.fromJson(data['response'][0]);
+      print('response: ${data['response'][0]}');
+
+      // SquadResponse 객체로 변환
+      final squadResponse = SquadResponse.fromJson(data['response'][0]);
+
+      // SquadResponse 객체 출력
+      print('SquadResponse 객체: $squadResponse');
+
+      return squadResponse;
     } else {
       print('Failed to fetch squad: ${response.statusCode}');
     }
