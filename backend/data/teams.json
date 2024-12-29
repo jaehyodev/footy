@@ -11,7 +11,7 @@
         "countryCode": "NL"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -26,7 +26,7 @@
         "countryCode": "ES"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -41,7 +41,7 @@
         "countryCode": "IT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -56,7 +56,7 @@
         "countryCode": "ES"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -71,7 +71,7 @@
         "countryCode": "US"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -86,7 +86,7 @@
         "countryCode": "AU"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -101,7 +101,7 @@
         "countryCode": "PT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -116,7 +116,7 @@
         "countryCode": "ES"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -131,7 +131,7 @@
         "countryCode": "PT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -146,7 +146,7 @@
         "countryCode": "GB-ENG"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -161,7 +161,7 @@
         "countryCode": "DE"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -176,7 +176,7 @@
         "countryCode": "PT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -191,7 +191,7 @@
         "countryCode": "ES"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -206,7 +206,7 @@
         "countryCode": "ES"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -221,7 +221,7 @@
         "countryCode": "GB-ENG"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -236,7 +236,7 @@
         "countryCode": "NL"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -251,7 +251,7 @@
         "countryCode": "PT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -266,7 +266,7 @@
         "countryCode": "GB-ENG"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -281,7 +281,7 @@
         "countryCode": "AT"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -296,7 +296,7 @@
         "countryCode": "HR"
       },
       "league": {
-        "id": "PR",
+        "code": "PR",
         "name": "프리미어리그"
       }
     },
@@ -311,7 +311,7 @@
         "countryCode": "BE"
       },
       "league": {
-        "id": "BL1",
+        "code": "BL1",
         "name": "분데스리가"
       }
     }
