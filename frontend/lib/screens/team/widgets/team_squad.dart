@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +35,7 @@ class _TeamSquadState extends State<TeamSquad> {
       final team = await _teamService.fetchTeamInKorean(selectedTeamId);
       final players = await _teamService.fetchPlayersInKorean(selectedTeamId);
       final eSquad = await _teamService.fetchSquadInEnglish(selectedTeamId);
+      final manager = await _teamService.fetchManager(selectedTeamId);
 
       // 팀 정보에서 감독 정보를 _squad['Manager']에 넣기
       Map<String, List<dynamic>> squad = {
@@ -47,6 +50,7 @@ class _TeamSquadState extends State<TeamSquad> {
       squad['감독']!.add({
         'name': team['manager']['name'],
         'position': '감독',
+        'photo': manager!.photo,
         'countryCode': team['manager']['countryCode'],
         'countryName': team['manager']['countryName'],
       });
@@ -56,7 +60,7 @@ class _TeamSquadState extends State<TeamSquad> {
         // eSquad에서 해당 선수의 photo를 찾기
         String playerPhoto = '';
         for (var ePlayer in eSquad!.players) {
-          if (ePlayer.number == player['uniformNumber']) {
+          if (ePlayer.number.toString() == player['uniformNumber'].toString()) {
             playerPhoto = ePlayer.photo;
             break;
           }
