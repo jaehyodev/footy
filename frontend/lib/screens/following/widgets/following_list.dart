@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/models/team.dart';
 import 'package:frontend/screens/team/team_screen.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
@@ -24,12 +25,21 @@ class _FollowingListState extends State<FollowingList> {
         itemCount: followingProvider.followingTeams.length,
         itemBuilder: (context, index) {
           // Set을 List로 변환하여 인덱스를 사용할 수 있도록 함
-          List<String> teamList = followingProvider.followingTeams.toList();
-          final teamName = teamList[index];
+          List<int> teamIdList = followingProvider.followingTeams.toList();
+          final teamId = teamIdList[index];
 
-          // 팀 객체를 얻기 위한 방법 (예시로 `Constants.teams`에서 찾는 방법)
-          final team =
-              Constants.teams.firstWhere((team) => team.name == teamName);
+          // 팀 객체를 얻기 위한 방법 (orElse 추가하여 조건에 맞는 팀이 없을 경우 기본값 처리)
+          final team = Constants.teams.firstWhere(
+            (team) => team.id == teamId,
+            orElse: () => Team(
+                id: 0,
+                tla: 'Unknown',
+                name: 'Unknown Team',
+                shortName: 'Unknown Team',
+                country: 'Unknown',
+                color: 'Unknown',
+                logo: 'assets/placeholder.png'), // 기본값 설정
+          );
 
           return Container(
             margin: const EdgeInsets.only(top: 16.0),
@@ -50,7 +60,7 @@ class _FollowingListState extends State<FollowingList> {
                       icon: const Icon(Icons.remove_circle_outline,
                           color: Colors.red),
                       onPressed: () {
-                        followingProvider.toggleFollow(team.name); // 팀 삭제 처리
+                        followingProvider.toggleFollow(team.id); // 팀 삭제 처리
                       },
                     )
                   : null,
