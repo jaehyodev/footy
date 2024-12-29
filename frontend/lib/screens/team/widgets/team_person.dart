@@ -9,15 +9,17 @@ class TeamPerson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 'photo'가 있으면 해당 'photo'를 사용하고, 없으면 기본 레고 이미지 사용
+    final photoUrl =
+        player['photo'] ?? 'https://randomuser.me/api/portraits/lego/1.jpg';
+
     return Container(
       padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
       child: Row(
         children: [
-          const CircleAvatar(
+          CircleAvatar(
             radius: 30,
-            backgroundImage: NetworkImage(
-              'https://randomuser.me/api/portraits/lego/1.jpg', // 랜덤 이미지를 사용할 경우
-            ),
+            backgroundImage: NetworkImage(photoUrl),
           ),
           const Gap(16),
           Column(
