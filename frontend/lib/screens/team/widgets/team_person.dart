@@ -10,8 +10,9 @@ class TeamPerson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 'photo'가 있으면 해당 'photo'를 사용하고, 없으면 기본 레고 이미지 사용
-    final photoUrl =
-        player['photo'] ?? 'https://randomuser.me/api/portraits/lego/1.jpg';
+    final photoUrl = (player['photo'] != null && player['photo'].isNotEmpty)
+        ? player['photo']
+        : 'https://randomuser.me/api/portraits/lego/1.jpg';
 
     return Container(
       padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
@@ -33,14 +34,18 @@ class TeamPerson extends StatelessWidget {
               const Gap(8),
               Row(
                 children: [
-                  CountryFlag.fromCountryCode(
-                    player['countryCode'],
-                    width: 30,
-                    height: 20,
-                  ),
+                  player['countryCode'] != null
+                      ? CountryFlag.fromCountryCode(
+                          player['countryCode'],
+                          width: 30,
+                          height: 20,
+                        )
+                      : const Icon(Icons.flag,
+                          size: 30), // countryCode가 null일 경우 대체 아이콘 표시
                   const Gap(12),
                   Text(
-                    player['countryName'],
+                    player['countryName'] ??
+                        'Unknown', // countryName이 null일 경우 'Unknown'으로 처리
                     style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                   ),
                 ],
