@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:frontend/models/player_in_korean.dart';
 import 'package:http/http.dart' as http;
@@ -7,7 +8,7 @@ import 'package:frontend/models/squad_response.dart';
 
 class TeamService {
   // 특정 팀을 가져오는 메서드 (한국어)
-  Future<Map<String, dynamic>> fetchTeamByKorean(int teamId) async {
+  Future<Map<String, dynamic>> fetchTeamInKorean(int teamId) async {
     try {
       final response = await http.get(
         Uri.parse(
@@ -17,7 +18,6 @@ class TeamService {
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(response.body);
         // 팀 리스트에서 id가 teamId와 일치하는 팀을 찾음
-        print(data);
         return data['teams'].firstWhere((team) => team['id'] == teamId);
       } else {
         throw Exception('Failed to load team');
@@ -28,7 +28,7 @@ class TeamService {
   }
 
   // 특정 팀의 선수들을 가져오는 메서드 (한국어)
-  Future<List<Map<String, dynamic>>> fetchPlayersByKorean(int teamId) async {
+  Future<List<Map<String, dynamic>>> fetchPlayersInKorean(int teamId) async {
     print("받은 팀 아이디:$teamId");
 
     final response = await http.get(Uri.parse(
@@ -52,7 +52,7 @@ class TeamService {
   }
 
   // 특정 팀의 선수들을 가져오는 메서드 (영어)
-  Future<SquadResponse?> fetchSquadByEnglish(int teamId) async {
+  Future<SquadResponse?> fetchSquadInEnglish(int teamId) async {
     final String apiKey = dotenv.env['API_FOOTBALL_KEY'] ?? 'No API Key';
     final url = Uri.parse(
         'https://v3.football.api-sports.io/players/squads?team=$teamId');
@@ -67,11 +67,15 @@ class TeamService {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
+
+      // JSON 데이터를 잘리지 않게 출력
+      debugPrint(jsonEncode(data), wrapWidth: 1024); // 줄바꿈을 적용하여 출력
+
       // SquadResponse 객체로 변환하여 리턴
       return SquadResponse.fromJson(data['response'][0]);
     } else {
       print('Failed to fetch squad: ${response.statusCode}');
-      return null;
     }
+    return null;
   }
 }

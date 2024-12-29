@@ -1,6 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 
 import 'package:frontend/providers/team_provider.dart';
@@ -31,16 +30,9 @@ class _TeamSquadState extends State<TeamSquad> {
 
     try {
       // 팀 정보 가져오기
-      final team = await _teamService.fetchTeamByKorean(selectedTeamId);
-      final players = await _teamService.fetchPlayersByKorean(selectedTeamId);
-
-      // 데이터가 null 또는 비어있지 않은지 확인
-      if (players.isEmpty) {
-        print('선수 데이터가 없습니다.');
-      } else {
-        print('헤이'); // players 출력 전에 확인
-        print(jsonEncode(players)); // 실제 players 내용 출력
-      }
+      final team = await _teamService.fetchTeamInKorean(selectedTeamId);
+      final players = await _teamService.fetchPlayersInKorean(selectedTeamId);
+      final eSquad = await _teamService.fetchSquadInEnglish(selectedTeamId);
 
       // 팀 정보에서 감독 정보를 _squad['Manager']에 넣기
       Map<String, List<dynamic>> squad = {
@@ -55,11 +47,24 @@ class _TeamSquadState extends State<TeamSquad> {
       squad['감독']!.add({
         'name': team['manager']['name'],
         'position': '감독',
-        'country': team['manager']['country'],
+        'countryCode': team['manager']['countryCode'],
+        'countryName': team['manager']['countryName'],
       });
 
       // 선수 정보를 포지션별로 분류
       for (var player in players) {
+        // eSquad에서 해당 선수의 photo를 찾기
+        String playerPhoto = '';
+        for (var ePlayer in eSquad!.players) {
+          if (ePlayer.number == player['uniformNumber']) {
+            playerPhoto = ePlayer.photo;
+            break;
+          }
+        }
+
+        // 선수에 photo 추가
+        player['photo'] = playerPhoto;
+
         if (player['position'] == 'GK') {
           squad['골키퍼']!.add(player);
         } else if (player['position'] == 'DF') {
@@ -106,7 +111,7 @@ class _TeamSquadState extends State<TeamSquad> {
               final players = squad[position]!;
 
               // _buildPositionCard를 사용하여 ListTile 대신 Card를 넣기
-              return _buildPositionCard(position, players);
+              return _buildPositionCard(position, players, index, squad.length);
             },
           ),
         );
@@ -114,27 +119,47 @@ class _TeamSquadState extends State<TeamSquad> {
     );
   }
 
-  Widget _buildPositionCard(String position, List<dynamic> players) {
+  Widget _buildPositionCard(
+      String position, List<dynamic> players, int index, int squadLength) {
     return Card(
-      margin: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
+      margin: EdgeInsets.only(
+        top: index == 0 ? 16 : 8, // 첫 번째 카드에는 위 margin 16을 주고, 나머지는 0
+        left: 16,
+        right: 16,
+        bottom:
+            index == squadLength - 1 ? 16 : 8, // 하단에만 margin 8을 주어 카드 간 간격을 유지
+      ),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 6,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
               position,
               style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          Column(
-            children: players.map<Widget>((player) {
-              return TeamPerson(player: player); // TeamPerson 위젯 사용
-            }).toList(),
-          ),
-        ],
+            const Gap(8),
+            Column(
+              children: players.map<Widget>((player) {
+                return TeamPerson(player: player);
+              }).toList(),
+            ),
+          ],
+        ),
       ),
     );
   }
