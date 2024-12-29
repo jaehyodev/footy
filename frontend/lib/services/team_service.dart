@@ -1,16 +1,16 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:frontend/models/squad_response.dart';
+
 class TeamService {
-  // 특정 팀을 가져오는 메서드
-  Future<Map<String, dynamic>> fetchTeamById(String teamId) async {
+  // 특정 팀을 가져오는 메서드 (한국어)
+  Future<Map<String, dynamic>> fetchTeamByKorean(int teamId) async {
     try {
       final response = await http.get(
         Uri.parse(
             'https://port-0-footy-m415nzyb5a6ffceb.sel4.cloudtype.app/teams'),
-        headers: {
-          'Cache-Control': 'no-cache', // 캐시를 무효화하는 헤더 추가
-        },
       );
 
       if (response.statusCode == 200) {
@@ -26,8 +26,8 @@ class TeamService {
     }
   }
 
-  // 특정 팀의 선수들을 가져오는 메서드
-  Future<List<Map<String, dynamic>>> fetchSquad(String teamId) async {
+  // 특정 팀의 선수들을 가져오는 메서드 (한국어)
+  Future<List<Map<String, dynamic>>> fetchPlayersByKorean(int teamId) async {
     try {
       final response = await http.get(Uri.parse(
           'https://port-0-footy-m415nzyb5a6ffceb.sel4.cloudtype.app/players'));
@@ -47,6 +47,30 @@ class TeamService {
       }
     } catch (e) {
       throw Exception('Error fetching players: $e');
+    }
+  }
+
+  // 특정 팀의 선수들을 가져오는 메서드 (영어)
+  Future<SquadResponse?> fetchSquadByEnglish(int teamId) async {
+    final String apiKey = dotenv.env['API_FOOTBALL_KEY'] ?? 'No API Key';
+    final url = Uri.parse(
+        'https://v3.football.api-sports.io/players/squads?team=$teamId');
+
+    final response = await http.get(
+      url,
+      headers: {
+        'x-rapidapi-host': 'v3.football.api-sports.io',
+        'x-rapidapi-key': apiKey,
+      },
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      // SquadResponse 객체로 변환하여 리턴
+      return SquadResponse.fromJson(data['response'][0]);
+    } else {
+      print('Failed to fetch squad: ${response.statusCode}');
+      return null;
     }
   }
 }

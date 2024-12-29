@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 
+import 'package:frontend/models/squad_response.dart';
 import 'package:frontend/providers/team_provider.dart';
 import 'package:frontend/screens/team/widgets/team_person.dart';
 import 'package:frontend/services/team_service.dart';
@@ -29,10 +30,17 @@ class _TeamSquadState extends State<TeamSquad> {
         Provider.of<TeamProvider>(context, listen: false).selectedTeam!.id;
 
     // 팀 정보 가져오기
-    final team = await _teamService.fetchTeamById(selectedTeamId);
-    final players = await _teamService.fetchSquad(selectedTeamId);
+    final team = await _teamService.fetchTeamByKorean(selectedTeamId);
 
-    // 팀 정보에서 감독 정보를 _squad['Manager']에 넣기
+    // 선수 정보 가져오기
+    final List<Map<String, dynamic>> players =
+        await _teamService.fetchPlayersByKorean(selectedTeamId);
+
+    // 영어 API에서 선수 정보 가져오기
+    final SquadResponse? squadResponse =
+        await _teamService.fetchSquadByEnglish(selectedTeamId);
+
+    // squad를 미리 초기화
     Map<String, List<dynamic>> squad = {
       '감독': [],
       '골키퍼': [],
@@ -59,6 +67,32 @@ class _TeamSquadState extends State<TeamSquad> {
         squad['미드필더']!.add(player);
       } else if (player['position'] == 'FW') {
         squad['공격수']!.add(player);
+      }
+    }
+
+    // squadResponse에서 photo를 추가하여 player 데이터와 연결
+    if (squadResponse != null) {
+      for (var position in squad.keys) {
+        for (var player in squad[position]!) {
+          // squadResponse에서 photo 찾기
+          final matchedPlayer = squadResponse.players.firstWhere(
+            (p) => p.number == player['number'],
+            orElse: () => Player(
+              // player가 없을 경우 빈 Player 객체 반환
+              id: 0, // 기본 값 설정
+              name: '', // 기본 값 설정
+              age: 0, // 기본 값 설정
+              number: player['number'], // 해당 player의 번호를 사용
+              position: '', // 기본 값 설정
+              photo: '', // 기본 값 설정
+            ),
+          );
+
+          // matchedPlayer가 photo를 가지면 해당 photo를 추가
+          if (matchedPlayer.photo.isNotEmpty) {
+            player['photo'] = matchedPlayer.photo;
+          }
+        }
       }
     }
 
