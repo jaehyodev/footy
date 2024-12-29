@@ -1,8 +1,10 @@
 {
   "teams": [
     {
-      "id": "LIV",
+      "id": 40,
+      "tla": "LIV",
       "name": "리버풀",
+      "shortName": "리버풀",
       "manager": {
         "name": "아르네 슬롯",
         "countryName": "네덜란드",
@@ -14,8 +16,10 @@
       }
     },
     {
-      "id": "MCI",
-      "name": "맨시티",
+      "id": 50,
+      "tla": "MCI",
+      "name": "맨체스터 시티",
+      "shortName": "맨시티",
       "manager": {
         "name": "펩 과르디올라",
         "countryName": "스페인",
@@ -27,8 +31,10 @@
       }
     },
     {
-      "id": "CHE",
+      "id": 49,
+      "tla": "CHE",
       "name": "첼시",
+      "shortName": "첼시",
       "manager": {
         "name": "엔초 마레스카",
         "countryName": "이탈리아",
@@ -40,8 +46,10 @@
       }
     },
     {
-      "id": "ARS",
+      "id": 42,
+      "tla": "ARS",
       "name": "아스널",
+      "shortName": "아스널",
       "manager": {
         "name": "미켈 아르테타",
         "countryName": "스페인",
@@ -53,8 +61,10 @@
       }
     },
     {
-      "id": "BHA",
+      "id": 51,
+      "tla": "BHA",
       "name": "브라이튼",
+      "shortName": "브라이튼 앤 호브 알비온",
       "manager": {
         "name": "파비안 휘르첼러",
         "countryName": "미국",
@@ -66,8 +76,10 @@
       }
     },
     {
-      "id": "TOT",
-      "name": "토트넘",
+      "id": 48,
+      "tla": "TOT",
+      "name": "토트넘 홋스퍼",
+      "shortName": "토트넘",
       "manager": {
         "name": "엔지 포스테코글루",
         "countryName": "호주",
@@ -79,10 +91,12 @@
       }
     },
     {
-      "id": "NOT",
-      "name": "노팅엄",
+      "id": 45,
+      "tla": "NOT",
+      "name": "노팅엄 포레스트",
+      "shortName": "노팅엄",
       "manager": {
-        "name": "누누 에스피리투 산투",
+        "name": "누누 에스피리투 산토",
         "countryName": "포르투갈",
         "countryCode": "PT"
       },
@@ -92,8 +106,10 @@
       }
     },
     {
-      "id": "AVL",
+      "id": 47,
+      "tla": "AVL",
       "name": "애스턴 빌라",
+      "shortName": "애스턴 빌라",
       "manager": {
         "name": "우나이 에메리",
         "countryName": "스페인",
@@ -105,8 +121,10 @@
       }
     },
     {
-      "id": "FUL",
+      "id": 46,
+      "tla": "FUL",
       "name": "풀럼",
+      "shortName": "풀럼",
       "manager": {
         "name": "마르코 실바",
         "countryName": "포르투갈",
@@ -118,8 +136,10 @@
       }
     },
     {
-      "id": "NEW",
-      "name": "뉴캐슬",
+      "id": 44,
+      "tla": "NEW",
+      "name": "뉴캐슬 유나이티드",
+      "shortName": "뉴캐슬",
       "manager": {
         "name": "에디 하우",
         "countryName": "잉글랜드",
@@ -131,8 +151,10 @@
       }
     },
     {
-      "id": "BRE",
+      "id": 52,
+      "tla": "BRE",
       "name": "브렌트퍼드",
+      "shortName": "브렌트퍼드",
       "manager": {
         "name": "토마스 프랭크",
         "countryName": "덴마크",
@@ -144,10 +166,12 @@
       }
     },
     {
-      "id": "MNU",
-      "name": "맨유",
+      "id": 33,
+      "tla": "MNU",
+      "name": "맨체스터 유나이티드",
+      "shortName": "맨유",
       "manager": {
-        "name": "후벵 아모링",
+        "name": "루벤 아모림",
         "countryName": "포르투갈",
         "countryCode": "PT"
       },
@@ -157,8 +181,10 @@
       }
     },
     {
-      "id": "BOU",
-      "name": "본머스",
+      "id": 43,
+      "tla": "BOU",
+      "name": "AFC 본머스",
+      "shortName": "본머스",
       "manager": {
         "name": "안도니 이라올라",
         "countryName": "스페인",
@@ -170,8 +196,10 @@
       }
     },
     {
-      "id": "WHU",
-      "name": "웨스트햄",
+      "id": 41,
+      "tla": "WHU",
+      "name": "웨스트햄 유나이티드",
+      "shortName": "웨스트햄",
       "manager": {
         "name": "훌렌 로페테기",
         "countryName": "스페인",
@@ -183,8 +211,10 @@
       }
     },
     {
-      "id": "EVE",
+      "id": 53,
+      "tla": "EVE",
       "name": "에버턴",
+      "shortName": "에버턴",
       "manager": {
         "name": "션 다이치",
         "countryName": "잉글랜드",
@@ -196,8 +226,10 @@
       }
     },
     {
-      "id": "LEI",
+      "id": 54,
+      "tla": "LEI",
       "name": "레스터 시티",
+      "shortName": "레스터 시티",
       "manager": {
         "name": "뤼트 판니스텔로이",
         "countryName": "네덜란드",
@@ -209,8 +241,10 @@
       }
     },
     {
-      "id": "WOL",
+      "id": 55,
+      "tla": "WOL",
       "name": "울버햄턴",
+      "shortName": "울버햄턴 원더러스",
       "manager": {
         "name": "비토르 페레이라",
         "countryName": "포르투갈",
@@ -222,8 +256,10 @@
       }
     },
     {
-      "id": "IPW",
+      "id": 56,
+      "tla": "IPW",
       "name": "입스위치",
+      "shortName": "입스위치 타운",
       "manager": {
         "name": "키어런 맥케나",
         "countryName": "잉글랜드",
@@ -235,8 +271,10 @@
       }
     },
     {
-      "id": "CRY",
-      "name": "팰리스",
+      "id": 57,
+      "tla": "CRY",
+      "name": "크리스탈 팰리스",
+      "shortName": "팰리스",
       "manager": {
         "name": "올리버 글라스너",
         "countryName": "오스트리아",
@@ -248,8 +286,10 @@
       }
     },
     {
-      "id": "SOU",
+      "id": 58,
+      "tla": "SOU",
       "name": "사우샘프턴",
+      "shortName": "사우샘프턴",
       "manager": {
         "name": "이반 유리치",
         "countryName": "크로아티아",
@@ -261,8 +301,10 @@
       }
     },
     {
-      "id": "BAY",
+      "id": 21,
+      "tla": "BAY",
       "name": "바이에른 뮌헨",
+      "shortName": "뭰헨",
       "manager": {
         "name": "뱅상 콤파니",
         "countryName": "벨기에",
