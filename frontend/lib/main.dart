@@ -1,8 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 import 'package:frontend/data/constants.dart';
 import 'package:frontend/providers/date_provider.dart';
@@ -26,6 +30,21 @@ import 'package:frontend/widgets/bottom_nav_bar.dart';
 void main() async {
   await dotenv.load(fileName: 'assets/config/.env');
 
+  // 카카오 로그인
+  KakaoSdk.init(
+    nativeAppKey: '6396447500839981d03bccc4f916cc25',
+    javaScriptAppKey: '8a723f3366fbb924bad1061d78e4884d',
+  );
+
+  // 카카오 키 해시 확인
+  // print(await KakaoSdk.origin);
+
+  // firebase 초기화
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     MultiProvider(
       providers: [
@@ -38,7 +57,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => TeamProvider()),
       ],
       child: MaterialApp(
-        home: const SplashScreen(), // 첫 화면으로 SplashScreen 설
+        home: const SplashScreen(),
         theme: AppStyle.theme,
       ),
     ),
@@ -67,7 +86,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-  // 화면을 전환하는 함수
+  // 화면 전환
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;

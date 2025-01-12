@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:frontend/screens/settings/widgets/settings_logout.dart';
 import 'package:frontend/screens/settings/widgets/settings_notification.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -15,6 +15,7 @@ class SettingsScreenState extends State<SettingsScreen> {
     return const Column(
       children: [
         SettingsNotification(),
+        SettingsLogout(),
       ],
     );
   }
