@@ -231,4 +231,7 @@ google-services.json
 ### Environment Configuration ###
 assets/config/.env
 
+# Firebase Admin SDK Service Account Key
+backend/functions/footy-dba5b-firebase-adminsdk-1cdrk-0d416172b0.json
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,flutter,node
