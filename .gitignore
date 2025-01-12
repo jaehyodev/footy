@@ -224,6 +224,10 @@ dist
 .history
 .ionide
 
+### Firebase ###
+firebase_options.dart
+google-services.json
+
 ### Environment Configuration ###
 assets/config/.env
 

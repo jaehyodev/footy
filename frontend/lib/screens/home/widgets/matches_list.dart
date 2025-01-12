@@ -48,7 +48,7 @@ class _MatchesListState extends State<MatchesList> {
 
   Future<void> fetchMatches(String leagueCode, DateTime dateTime) async {
     setState(() => isLoading = true);
-    LoaderOverlay.show(context); // 로딩 표시
+    LoaderOverlay.show(context);
     try {
       final fetchedMatches =
           await MatchesService.fetchMatches(leagueCode, dateTime);
@@ -60,7 +60,7 @@ class _MatchesListState extends State<MatchesList> {
     } finally {
       if (mounted) {
         setState(() => isLoading = false);
-        LoaderOverlay.hide(); // 로딩 숨김
+        LoaderOverlay.hide();
       }
     }
   }

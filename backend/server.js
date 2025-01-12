@@ -1,10 +1,14 @@
 const express = require("express");
 const cors = require("cors");
+
 const app = express();
 const port = 3000;
 
 // CORS 미들웨어 적용 (플러터 앱 연결)
 app.use(cors());
+
+// JSON 요청 처리
+app.use(express.json());
 
 // db.json 데이터 불러오기
 const leagues = require("./data/leagues.json");
