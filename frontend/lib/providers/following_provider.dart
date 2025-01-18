@@ -66,13 +66,19 @@ class FollowingProvider extends ChangeNotifier {
     try {
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        await FirebaseFirestore.instance
-            .collection('user')
-            .doc(user.uid)
-            .update({
-          'followingTeams': followingTeams,
-        });
-        print('성공');
+        final docRef =
+            FirebaseFirestore.instance.collection('user').doc(user.uid);
+        final docSnapshot = await docRef.get();
+
+        if (docSnapshot.exists) {
+          await docRef.update({
+            'followingTeams': followingTeams,
+          });
+        } else {
+          await docRef.set({
+            'followingTeams': followingTeams,
+          });
+        }
       }
     } catch (e) {
       print(e);
